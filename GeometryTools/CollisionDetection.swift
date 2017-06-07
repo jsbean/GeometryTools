@@ -8,6 +8,8 @@
 
 import ArithmeticTools
 
+/// - Returns: `true` if any convex polygons of one `CollisionDetectable`-conforming type
+/// intersect with another. Otherwise, `false`.
 public func collision(_ a: CollisionDetectable, _ b: CollisionDetectable) -> Bool {
     
     for a in a.collisionDetectable.polygons {
@@ -23,6 +25,10 @@ public func collision(_ a: CollisionDetectable, _ b: CollisionDetectable) -> Boo
 
 /// - Returns: `true` if the axes of either shape overlap with those of the other. Otherwise,
 /// `false`.
+///
+/// - Note: Uses the `Separating Axis Theorem` to determine whether or not the convex polygonal
+/// shapes intersect.
+///
 func collision(_ a: ConvexPolygonProtocol, _ b: ConvexPolygonProtocol) -> Bool {
     return (
         axesOverlap(projecting: a, ontoAxesOf: b) &&
@@ -30,32 +36,28 @@ func collision(_ a: ConvexPolygonProtocol, _ b: ConvexPolygonProtocol) -> Bool {
     )
 }
 
-/// - Returns: `true` if there are any overlaps of the values of either shape value projected
-/// onto the axes of the given `shape`. Otherwise, `false`.
+/// - Returns: `false` if there are _any_ spaces between the range projected by the given
+/// `other` shape onto the axes of the given `shape`. Otherwise, `true`.
 func axesOverlap(
     projecting other: ConvexPolygonProtocol,
     ontoAxesOf shape: ConvexPolygonProtocol
 ) -> Bool
 {
-    
     // Project `shape` and `other` onto each axis of `shape`.
     for axis in shape.axes {
         
-        let shapeValues = project(shape, onto: axis)
-        let otherValues = project(other, onto: axis)
-        
         // If we ever see light between two shapes, we short-circuit to `false`
-        if !axesOverlap(a: shapeValues, b: otherValues) {
+        if !axesOverlap(project(shape, onto: axis), project(other, onto: axis)) {
             return false
         }
     }
     
-    // Each pair of axes overlapped
+    // All pairs of axes overlapped.
     return true
 }
 
 /// - Returns: `true` if there is any overlap between the two given ranges. Otherwise, `false`.
-func axesOverlap(a: (min: Double, max: Double), b: (min: Double, max: Double)) -> Bool {
+func axesOverlap(_ a: (min: Double, max: Double), _ b: (min: Double, max: Double)) -> Bool {
     return !(a.min > b.max || b.min > a.max)
 }
 

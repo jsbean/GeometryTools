@@ -10,6 +10,9 @@ import Collections
 import ArithmeticTools
 
 /// A structure that contains the location and dimensions of a rectangle.
+///
+/// - TODO: Consider storing vertices as with `Polygon`, as opposed to being computed.
+///
 public struct Rectangle: ConvexPolygonProtocol {
     
     // MARK: - Type Properties

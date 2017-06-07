@@ -9,8 +9,12 @@
 import Darwin
 import Collections
 
+/// Model of a triangle.
 public struct Triangle: ConvexPolygonProtocol {
     
+    // MARK: - Instance Properties
+    
+    /// - Returns: The angle of `Triangle`.
     public var angle: Angle {
         
         let p1 = vertices[0]
@@ -24,12 +28,20 @@ public struct Triangle: ConvexPolygonProtocol {
         return Angle(radians: acos((a + b - c) / sqrt(4 * a * b)))
     }
     
+    /// Vertices contained herein.
     public let vertices: VertexCollection
     
+    // MARK: - Initializers
+    
+    /// Create a `Triangle` with the given three vertices.
     public init(_ a: Point, _ b: Point, _ c: Point) {
         self.vertices = [a,b,c]
     }
     
+    /// Create a `Triangle` with the given vertices.
+    ///
+    /// - Warning: Will crash if given more or less than three vertices!
+    ///
     public init <S: Sequence> (vertices: S) where S.Iterator.Element == Point {
         
         let vertices = VertexCollection(vertices)
@@ -41,6 +53,7 @@ public struct Triangle: ConvexPolygonProtocol {
         self.vertices = vertices
     }
 
+    /// - Returns: `true` if `Triangle` is convex for the given `rotation`. Otherwise, `false`. 
     public func isConvex(rotation: Rotation) -> Bool {
         
         let (a,b,c) = (vertices[0], vertices[1], vertices[2])
@@ -54,6 +67,7 @@ public struct Triangle: ConvexPolygonProtocol {
         }
     }
     
+    /// - Returns: `true` if `Triangle` contains the given `point` in its area.
     public func contains(_ point: Point) -> Bool {
 
         func sign(a: Point, b: Point, c: Point) -> FloatingPointSign {
@@ -70,6 +84,9 @@ public struct Triangle: ConvexPolygonProtocol {
 
 extension Triangle: Equatable {
     
+    // MARK: - Equatable
+    
+    /// - Returns: `true` if both `Triangle` values are equivalent. Otherwise, `false`.
     public static func == (lhs: Triangle, rhs: Triangle) -> Bool {
         return lhs.vertices == rhs.vertices
     }
