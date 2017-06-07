@@ -30,18 +30,13 @@ public func collision(_ a: CollisionDetectable, _ b: CollisionDetectable) -> Boo
 /// shapes intersect.
 ///
 func collision(_ a: ConvexPolygonProtocol, _ b: ConvexPolygonProtocol) -> Bool {
-    return (
-        axesOverlap(projecting: a, ontoAxesOf: b) &&
-        axesOverlap(projecting: b, ontoAxesOf: a)
-    )
+    return axesOverlap(projecting: a, onto: b) && axesOverlap(projecting: b, onto: a)
 }
 
 /// - Returns: `false` if there are _any_ spaces between the range projected by the given
 /// `other` shape onto the axes of the given `shape`. Otherwise, `true`.
-func axesOverlap(
-    projecting other: ConvexPolygonProtocol,
-    ontoAxesOf shape: ConvexPolygonProtocol
-) -> Bool
+func axesOverlap(projecting other: ConvexPolygonProtocol, onto shape: ConvexPolygonProtocol)
+    -> Bool
 {
     // Project `shape` and `other` onto each axis of `shape`.
     for axis in shape.axes {
