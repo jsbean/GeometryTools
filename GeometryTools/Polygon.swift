@@ -119,6 +119,19 @@ public struct Polygon: PolygonProtocol {
     }
 }
 
+extension Polygon: Monoid {
+    
+    /// Empty polygon.
+    public static let unit = Polygon(vertices: [])
+    
+    /// Creates union of two given `Polygon` values.
+    /// - Warning: Not yet implemented.
+    public static func + (lhs: Polygon, rhs: Polygon) -> Polygon {
+        fatalError("Not yet implemented!")
+        //return Polygon(vertices: lhs.vertices + rhs.vertices)
+    }
+}
+
 extension Polygon: Equatable {
     
     // MARK: Equatable
