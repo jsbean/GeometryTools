@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1440711982B41D8AD4ED7304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
+		437FF1B9A9A85DBB8077096B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
+		5C4BF7F6DE97390D8483C13A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
+		5E7FDEB2E3CAD141D408B6C7 /* GeometryTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CC342F757C18B4D01268B653 /* GeometryTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6D3630F16CDF22A19AD879B /* GeometryTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CC342F757C18B4D01268B653 /* GeometryTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF83CBD5F4A47FBC67050591 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		605DF8E3039AA48BB41CB86D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A33E335543FD8D9855BBC0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D195CFB9C162E2694AA5C640;
+			remoteInfo = "GeometryTools macOS";
+		};
+		E25957CAC7DD851DD1E246F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A33E335543FD8D9855BBC0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8436E8B83737049996108DB;
+			remoteInfo = "GeometryTools iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDB7C93B33804F63AF722F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A7BEEB5E08E3988CD2ABE6C /* GeometryTools macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "GeometryTools macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7125917D20CD33D272889EE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeometryTools/Info.plist; sourceTree = "<group>"; };
+		8000F38E6269F2F330A19C01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		880554A91EEACD99053065E3 /* GeometryTools iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "GeometryTools iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3409A8808F14C43ECA54946 /* GeometryTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC342F757C18B4D01268B653 /* GeometryTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeometryTools.h; path = GeometryTools/GeometryTools.h; sourceTree = "<group>"; };
+		DF629B1FD0488578D584AFAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeometryToolsTests/Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		761CDEC8AF387899A23B7196 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1440711982B41D8AD4ED7304 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B3931310485D87BC0F1606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF83CBD5F4A47FBC67050591 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A824DDA5E3A5023969D681A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				437FF1B9A9A85DBB8077096B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54D10C46023796D6BAD2D70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4BF7F6DE97390D8483C13A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		449943C1A06BDCFB237E02AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				880554A91EEACD99053065E3 /* GeometryTools iOS.framework */,
+				59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */,
+				6A7BEEB5E08E3988CD2ABE6C /* GeometryTools macOS.framework */,
+				A3409A8808F14C43ECA54946 /* GeometryTools macOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4820E676E893CAE5990401BB /* GeometryTools */ = {
+			isa = PBXGroup;
+			children = (
+				9648B3D0507C3A2F8430CF69 /* Supporting Files */,
+			);
+			name = GeometryTools;
+			sourceTree = "<group>";
+		};
+		67A56A8198FD9BBF3029D6DB = {
+			isa = PBXGroup;
+			children = (
+				449943C1A06BDCFB237E02AF /* Products */,
+				73723FF5F1C2F8B2A8721A91 /* Frameworks */,
+				4820E676E893CAE5990401BB /* GeometryTools */,
+				77F77DAF0992F22217213927 /* GeometryToolsTests */,
+				CC342F757C18B4D01268B653 /* GeometryTools.h */,
+			);
+			sourceTree = "<group>";
+		};
+		73723FF5F1C2F8B2A8721A91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AE5DE61B8FEEE56D46A13E9 /* iOS */,
+				9D5C35285DC620B27654DFB0 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77F77DAF0992F22217213927 /* GeometryToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5AE7C0748B98CF9A42112E8 /* Supporting Files */,
+			);
+			name = GeometryToolsTests;
+			sourceTree = "<group>";
+		};
+		7AE5DE61B8FEEE56D46A13E9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB7C93B33804F63AF722F5 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9648B3D0507C3A2F8430CF69 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7125917D20CD33D272889EE4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D5C35285DC620B27654DFB0 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8000F38E6269F2F330A19C01 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		C5AE7C0748B98CF9A42112E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF629B1FD0488578D584AFAD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		055410301A21DAA13D67D457 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E7FDEB2E3CAD141D408B6C7 /* GeometryTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3A4F0F0D2320EAD9915FDDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D3630F16CDF22A19AD879B /* GeometryTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09259D58553996BA6AE82A3B /* GeometryTools macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED3A0E6D0957FC444F3D33B /* Build configuration list for PBXNativeTarget "GeometryTools macOS Tests" */;
+			buildPhases = (
+				FE12D4391C8A3A6B772B08B0 /* Sources */,
+				A7B3931310485D87BC0F1606 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C7043311D6FB6FA5BF294E /* PBXTargetDependency */,
+			);
+			name = "GeometryTools macOS Tests";
+			productName = "GeometryTools macOS Tests";
+			productReference = A3409A8808F14C43ECA54946 /* GeometryTools macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3D163E7838410FE38F37FC7 /* GeometryTools iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB2BFC62F72B45E211BC1535 /* Build configuration list for PBXNativeTarget "GeometryTools iOS Tests" */;
+			buildPhases = (
+				4FB8C0258E329797F7C74F5C /* Sources */,
+				761CDEC8AF387899A23B7196 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A2A7DF7C0D2FBD807820DC0 /* PBXTargetDependency */,
+			);
+			name = "GeometryTools iOS Tests";
+			productName = "GeometryTools iOS Tests";
+			productReference = 59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D195CFB9C162E2694AA5C640 /* GeometryTools macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB684495D25AF29C2B1470B4 /* Build configuration list for PBXNativeTarget "GeometryTools macOS" */;
+			buildPhases = (
+				E36852DC9F6BC01D0892E470 /* Sources */,
+				B54D10C46023796D6BAD2D70 /* Frameworks */,
+				055410301A21DAA13D67D457 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GeometryTools macOS";
+			productName = "GeometryTools macOS";
+			productReference = 6A7BEEB5E08E3988CD2ABE6C /* GeometryTools macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8436E8B83737049996108DB /* GeometryTools iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFA064723A91CB53799F3492 /* Build configuration list for PBXNativeTarget "GeometryTools iOS" */;
+			buildPhases = (
+				DF171BFD7DC63F6A74B61D0F /* Sources */,
+				A824DDA5E3A5023969D681A1 /* Frameworks */,
+				F3A4F0F0D2320EAD9915FDDA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GeometryTools iOS";
+			productName = "GeometryTools iOS";
+			productReference = 880554A91EEACD99053065E3 /* GeometryTools iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A33E335543FD8D9855BBC0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = AF40F1E993D43B002DC1439B /* Build configuration list for PBXProject "GeometryTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67A56A8198FD9BBF3029D6DB;
+			productRefGroup = 449943C1A06BDCFB237E02AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8436E8B83737049996108DB /* GeometryTools iOS */,
+				C3D163E7838410FE38F37FC7 /* GeometryTools iOS Tests */,
+				D195CFB9C162E2694AA5C640 /* GeometryTools macOS */,
+				09259D58553996BA6AE82A3B /* GeometryTools macOS Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FB8C0258E329797F7C74F5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF171BFD7DC63F6A74B61D0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E36852DC9F6BC01D0892E470 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE12D4391C8A3A6B772B08B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A2A7DF7C0D2FBD807820DC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GeometryTools iOS";
+			target = D8436E8B83737049996108DB /* GeometryTools iOS */;
+			targetProxy = E25957CAC7DD851DD1E246F1 /* PBXContainerItemProxy */;
+		};
+		F3C7043311D6FB6FA5BF294E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GeometryTools macOS";
+			target = D195CFB9C162E2694AA5C640 /* GeometryTools macOS */;
+			targetProxy = 605DF8E3039AA48BB41CB86D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30199E907D8D579C702BD4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Debug;
+		};
+		53904ECE27A8CF9E261B17D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9973A8A63348BC7F20147C1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ADF1AF18F2C6756E86A23B73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m.GeometryTools";
+				PRODUCT_NAME = GeometryTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B16BE802992C72886DB7E646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m.GeometryTools";
+				PRODUCT_NAME = GeometryTools;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4668F801BB9B4578F6977C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D7DC9C54760564B0FFC6D923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m.GeometryTools";
+				PRODUCT_NAME = GeometryTools;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DB4626E1CDD07E72A828AC73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m.GeometryTools";
+				PRODUCT_NAME = GeometryTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF82BFA5E69D3D56FB395F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FBB3061FD8ED2AB3861AF869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF40F1E993D43B002DC1439B /* Build configuration list for PBXProject "GeometryTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30199E907D8D579C702BD4FD /* Debug */,
+				FBB3061FD8ED2AB3861AF869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB684495D25AF29C2B1470B4 /* Build configuration list for PBXNativeTarget "GeometryTools macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B16BE802992C72886DB7E646 /* Release */,
+				D7DC9C54760564B0FFC6D923 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB2BFC62F72B45E211BC1535 /* Build configuration list for PBXNativeTarget "GeometryTools iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF82BFA5E69D3D56FB395F9D /* Release */,
+				53904ECE27A8CF9E261B17D3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFA064723A91CB53799F3492 /* Build configuration list for PBXNativeTarget "GeometryTools iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADF1AF18F2C6756E86A23B73 /* Release */,
+				DB4626E1CDD07E72A828AC73 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED3A0E6D0957FC444F3D33B /* Build configuration list for PBXNativeTarget "GeometryTools macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4668F801BB9B4578F6977C5 /* Release */,
+				9973A8A63348BC7F20147C1D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A33E335543FD8D9855BBC0E /* Project object */;
+}
