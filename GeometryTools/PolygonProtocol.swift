@@ -59,15 +59,6 @@ extension PolygonProtocol {
     public var angles: [Angle] {
         return vertices.angles
     }
-//    
-//    /// - Returns: `Path` representation of `PolygonProtocol`-conforming type. 
-//    public var path: Path {
-//        let (head, tail) = vertices.destructured!
-//        let first: PathElement = .move(head)
-//        let rest: [PathElement] = tail.map { .line($0) }
-//        let last: PathElement = .close
-//        return Path(first + rest + last)
-//    }
     
     /// - Returns: `true` if a `PolygonProtocol` contains the given `point`.
     public func contains(_ point: Point) -> Bool {
