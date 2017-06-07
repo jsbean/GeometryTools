@@ -149,6 +149,13 @@
 		071EF2C11EE8801B00C0116B /* Primitives */ = {
 			isa = PBXGroup;
 			children = (
+				071EF2E81EE8810F00C0116B /* Size.swift */,
+				071EF2E11EE8810F00C0116B /* Point.swift */,
+				071EF2DA1EE8810F00C0116B /* Angle.swift */,
+				071EF31C1EE8854900C0116B /* Vector2.swift */,
+				071EF2E01EE8810F00C0116B /* Line.swift */,
+				071EF2E71EE8810F00C0116B /* Shape.swift */,
+				071EF2E61EE8810F00C0116B /* Rotation.swift */,
 			);
 			name = Primitives;
 			sourceTree = "<group>";
@@ -192,16 +199,9 @@
 		4820E676E893CAE5990401BB /* GeometryTools */ = {
 			isa = PBXGroup;
 			children = (
-				071EF2E81EE8810F00C0116B /* Size.swift */,
-				071EF2E11EE8810F00C0116B /* Point.swift */,
-				071EF2DA1EE8810F00C0116B /* Angle.swift */,
-				071EF31C1EE8854900C0116B /* Vector2.swift */,
-				071EF2E01EE8810F00C0116B /* Line.swift */,
-				071EF2E71EE8810F00C0116B /* Shape.swift */,
-				071EF2E61EE8810F00C0116B /* Rotation.swift */,
+				071EF2C11EE8801B00C0116B /* Primitives */,
 				071EF31F1EE885BD00C0116B /* Polygon */,
 				071EF3201EE885E900C0116B /* Collision Detection */,
-				071EF2C11EE8801B00C0116B /* Primitives */,
 				9648B3D0507C3A2F8430CF69 /* Supporting Files */,
 			);
 			name = GeometryTools;

@@ -7,34 +7,44 @@
 //
 
 import Darwin
-import ArithmeticTools
 
 /// Representation of a point.
-///
-/// - TODO: Consider making `Monoid`.
 public struct Point {
     
+    // MARK: - Instance Properties
+    
+    /// Horizontal position.
     public let x: Double
+    
+    /// Vertical position.
     public let y: Double
     
+    // MARK: - Initializers
+    
+    /// Creates a `Point` with the given `x` and `y` values.
     public init(x: Double = 0, y: Double = 0) {
         self.x = x
         self.y = y
     }
     
+    // MARK: - Instance Properties
+    
+    /// - returns: The distance to the given `other` point.
     public func distance(to other: Point) -> Double {
         return hypot(other.x - self.x, other.y - self.y)
     }
     
-    public func translatedBy(x: Double, y: Double) -> Point {
-        return Point(x: self.x + x, y: self.y + y)
+    /// - returns: `Point` translated by the given `x` and `y` values.
+    public func translatedBy(x ΔX: Double, y ΔY: Double) -> Point {
+        return Point(x: x + ΔX, y: y + ΔY)
     }
 }
 
 extension Point: Equatable {
     
-    // MARK: - `Equatable`
+    // MARK: - Equatable
     
+    /// - Returns `true` if both `Point` values are equivalent. Otherwise, `false`.
     public static func == (lhs: Point, rhs: Point) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }
@@ -42,6 +52,9 @@ extension Point: Equatable {
 
 extension Point: CustomStringConvertible {
     
+    // MARK: - CustomStringConvertible
+    
+    /// Printed description.
     public var description: String {
         return "(\(x),\(y))"
     }
