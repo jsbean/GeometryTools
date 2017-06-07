@@ -10,7 +10,7 @@ import Collections
 import ArithmeticTools
 
 /// Interface for polygonal shapes.
-public protocol PolygonProtocol: Shape {
+public protocol PolygonProtocol: Shape, CollisionDetectable {
     
     // MARK: - Instance Properties
     
