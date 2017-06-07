@@ -7,6 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071EF2EC1EE8810F00C0116B /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DA1EE8810F00C0116B /* Angle.swift */; };
+		071EF2ED1EE8810F00C0116B /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DA1EE8810F00C0116B /* Angle.swift */; };
+		071EF2EE1EE8810F00C0116B /* CollisionDetectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DB1EE8810F00C0116B /* CollisionDetectable.swift */; };
+		071EF2EF1EE8810F00C0116B /* CollisionDetectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DB1EE8810F00C0116B /* CollisionDetectable.swift */; };
+		071EF2F01EE8810F00C0116B /* CollisionDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DC1EE8810F00C0116B /* CollisionDetection.swift */; };
+		071EF2F11EE8810F00C0116B /* CollisionDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DC1EE8810F00C0116B /* CollisionDetection.swift */; };
+		071EF2F21EE8810F00C0116B /* ConvexPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DD1EE8810F00C0116B /* ConvexPolygon.swift */; };
+		071EF2F31EE8810F00C0116B /* ConvexPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DD1EE8810F00C0116B /* ConvexPolygon.swift */; };
+		071EF2F41EE8810F00C0116B /* ConvexPolygonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DE1EE8810F00C0116B /* ConvexPolygonContainer.swift */; };
+		071EF2F51EE8810F00C0116B /* ConvexPolygonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DE1EE8810F00C0116B /* ConvexPolygonContainer.swift */; };
+		071EF2F61EE8810F00C0116B /* ConvexPolygonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DF1EE8810F00C0116B /* ConvexPolygonProtocol.swift */; };
+		071EF2F71EE8810F00C0116B /* ConvexPolygonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2DF1EE8810F00C0116B /* ConvexPolygonProtocol.swift */; };
+		071EF2F81EE8810F00C0116B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E01EE8810F00C0116B /* Line.swift */; };
+		071EF2F91EE8810F00C0116B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E01EE8810F00C0116B /* Line.swift */; };
+		071EF2FA1EE8810F00C0116B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E11EE8810F00C0116B /* Point.swift */; };
+		071EF2FB1EE8810F00C0116B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E11EE8810F00C0116B /* Point.swift */; };
+		071EF2FC1EE8810F00C0116B /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E21EE8810F00C0116B /* Polygon.swift */; };
+		071EF2FD1EE8810F00C0116B /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E21EE8810F00C0116B /* Polygon.swift */; };
+		071EF2FE1EE8810F00C0116B /* PolygonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E31EE8810F00C0116B /* PolygonError.swift */; };
+		071EF2FF1EE8810F00C0116B /* PolygonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E31EE8810F00C0116B /* PolygonError.swift */; };
+		071EF3001EE8810F00C0116B /* PolygonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E41EE8810F00C0116B /* PolygonProtocol.swift */; };
+		071EF3011EE8810F00C0116B /* PolygonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E41EE8810F00C0116B /* PolygonProtocol.swift */; };
+		071EF3021EE8810F00C0116B /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E51EE8810F00C0116B /* Rectangle.swift */; };
+		071EF3031EE8810F00C0116B /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E51EE8810F00C0116B /* Rectangle.swift */; };
+		071EF3041EE8810F00C0116B /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E61EE8810F00C0116B /* Rotation.swift */; };
+		071EF3051EE8810F00C0116B /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E61EE8810F00C0116B /* Rotation.swift */; };
+		071EF3061EE8810F00C0116B /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E71EE8810F00C0116B /* Shape.swift */; };
+		071EF3071EE8810F00C0116B /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E71EE8810F00C0116B /* Shape.swift */; };
+		071EF3081EE8810F00C0116B /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E81EE8810F00C0116B /* Size.swift */; };
+		071EF3091EE8810F00C0116B /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E81EE8810F00C0116B /* Size.swift */; };
+		071EF30A1EE8810F00C0116B /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E91EE8810F00C0116B /* Triangle.swift */; };
+		071EF30B1EE8810F00C0116B /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2E91EE8810F00C0116B /* Triangle.swift */; };
+		071EF30C1EE8810F00C0116B /* Vector2+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2EA1EE8810F00C0116B /* Vector2+Points.swift */; };
+		071EF30D1EE8810F00C0116B /* Vector2+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2EA1EE8810F00C0116B /* Vector2+Points.swift */; };
+		071EF30E1EE8810F00C0116B /* VertexCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2EB1EE8810F00C0116B /* VertexCollection.swift */; };
+		071EF30F1EE8810F00C0116B /* VertexCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF2EB1EE8810F00C0116B /* VertexCollection.swift */; };
+		071EF3141EE8817A00C0116B /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3101EE8817A00C0116B /* AngleTests.swift */; };
+		071EF3151EE8817A00C0116B /* AngleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3101EE8817A00C0116B /* AngleTests.swift */; };
+		071EF3161EE8817A00C0116B /* CollisionDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3111EE8817A00C0116B /* CollisionDetectionTests.swift */; };
+		071EF3171EE8817A00C0116B /* CollisionDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3111EE8817A00C0116B /* CollisionDetectionTests.swift */; };
+		071EF3181EE8817A00C0116B /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3121EE8817A00C0116B /* LineTests.swift */; };
+		071EF3191EE8817A00C0116B /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3121EE8817A00C0116B /* LineTests.swift */; };
+		071EF31A1EE8817A00C0116B /* PolygonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3131EE8817A00C0116B /* PolygonTests.swift */; };
+		071EF31B1EE8817A00C0116B /* PolygonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EF3131EE8817A00C0116B /* PolygonTests.swift */; };
 		1440711982B41D8AD4ED7304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		437FF1B9A9A85DBB8077096B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		5C4BF7F6DE97390D8483C13A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
@@ -33,12 +77,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071EF2DA1EE8810F00C0116B /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Angle.swift; path = GeometryTools/Angle.swift; sourceTree = "<group>"; };
+		071EF2DB1EE8810F00C0116B /* CollisionDetectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollisionDetectable.swift; path = GeometryTools/CollisionDetectable.swift; sourceTree = "<group>"; };
+		071EF2DC1EE8810F00C0116B /* CollisionDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollisionDetection.swift; path = GeometryTools/CollisionDetection.swift; sourceTree = "<group>"; };
+		071EF2DD1EE8810F00C0116B /* ConvexPolygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvexPolygon.swift; path = GeometryTools/ConvexPolygon.swift; sourceTree = "<group>"; };
+		071EF2DE1EE8810F00C0116B /* ConvexPolygonContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvexPolygonContainer.swift; path = GeometryTools/ConvexPolygonContainer.swift; sourceTree = "<group>"; };
+		071EF2DF1EE8810F00C0116B /* ConvexPolygonProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvexPolygonProtocol.swift; path = GeometryTools/ConvexPolygonProtocol.swift; sourceTree = "<group>"; };
+		071EF2E01EE8810F00C0116B /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Line.swift; path = GeometryTools/Line.swift; sourceTree = "<group>"; };
+		071EF2E11EE8810F00C0116B /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Point.swift; path = GeometryTools/Point.swift; sourceTree = "<group>"; };
+		071EF2E21EE8810F00C0116B /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Polygon.swift; path = GeometryTools/Polygon.swift; sourceTree = "<group>"; };
+		071EF2E31EE8810F00C0116B /* PolygonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolygonError.swift; path = GeometryTools/PolygonError.swift; sourceTree = "<group>"; };
+		071EF2E41EE8810F00C0116B /* PolygonProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolygonProtocol.swift; path = GeometryTools/PolygonProtocol.swift; sourceTree = "<group>"; };
+		071EF2E51EE8810F00C0116B /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = GeometryTools/Rectangle.swift; sourceTree = "<group>"; };
+		071EF2E61EE8810F00C0116B /* Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotation.swift; path = GeometryTools/Rotation.swift; sourceTree = "<group>"; };
+		071EF2E71EE8810F00C0116B /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = GeometryTools/Shape.swift; sourceTree = "<group>"; };
+		071EF2E81EE8810F00C0116B /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Size.swift; path = GeometryTools/Size.swift; sourceTree = "<group>"; };
+		071EF2E91EE8810F00C0116B /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Triangle.swift; path = GeometryTools/Triangle.swift; sourceTree = "<group>"; };
+		071EF2EA1EE8810F00C0116B /* Vector2+Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Vector2+Points.swift"; path = "GeometryTools/Vector2+Points.swift"; sourceTree = "<group>"; };
+		071EF2EB1EE8810F00C0116B /* VertexCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VertexCollection.swift; path = GeometryTools/VertexCollection.swift; sourceTree = "<group>"; };
+		071EF3101EE8817A00C0116B /* AngleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AngleTests.swift; path = GeometryToolsTests/AngleTests.swift; sourceTree = "<group>"; };
+		071EF3111EE8817A00C0116B /* CollisionDetectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollisionDetectionTests.swift; path = GeometryToolsTests/CollisionDetectionTests.swift; sourceTree = "<group>"; };
+		071EF3121EE8817A00C0116B /* LineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineTests.swift; path = GeometryToolsTests/LineTests.swift; sourceTree = "<group>"; };
+		071EF3131EE8817A00C0116B /* PolygonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolygonTests.swift; path = GeometryToolsTests/PolygonTests.swift; sourceTree = "<group>"; };
 		59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDB7C93B33804F63AF722F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6A7BEEB5E08E3988CD2ABE6C /* GeometryTools macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "GeometryTools macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7BEEB5E08E3988CD2ABE6C /* GeometryTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7125917D20CD33D272889EE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeometryTools/Info.plist; sourceTree = "<group>"; };
 		8000F38E6269F2F330A19C01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		880554A91EEACD99053065E3 /* GeometryTools iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "GeometryTools iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		880554A91EEACD99053065E3 /* GeometryTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3409A8808F14C43ECA54946 /* GeometryTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC342F757C18B4D01268B653 /* GeometryTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeometryTools.h; path = GeometryTools/GeometryTools.h; sourceTree = "<group>"; };
 		DF629B1FD0488578D584AFAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeometryToolsTests/Info.plist; sourceTree = "<group>"; };
@@ -80,12 +146,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071EF2C11EE8801B00C0116B /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Primitives;
+			sourceTree = "<group>";
+		};
 		449943C1A06BDCFB237E02AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				880554A91EEACD99053065E3 /* GeometryTools iOS.framework */,
+				880554A91EEACD99053065E3 /* GeometryTools.framework */,
 				59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */,
-				6A7BEEB5E08E3988CD2ABE6C /* GeometryTools macOS.framework */,
+				6A7BEEB5E08E3988CD2ABE6C /* GeometryTools.framework */,
 				A3409A8808F14C43ECA54946 /* GeometryTools macOS Tests.xctest */,
 			);
 			name = Products;
@@ -94,6 +167,25 @@
 		4820E676E893CAE5990401BB /* GeometryTools */ = {
 			isa = PBXGroup;
 			children = (
+				071EF2DA1EE8810F00C0116B /* Angle.swift */,
+				071EF2DB1EE8810F00C0116B /* CollisionDetectable.swift */,
+				071EF2DC1EE8810F00C0116B /* CollisionDetection.swift */,
+				071EF2DD1EE8810F00C0116B /* ConvexPolygon.swift */,
+				071EF2DE1EE8810F00C0116B /* ConvexPolygonContainer.swift */,
+				071EF2DF1EE8810F00C0116B /* ConvexPolygonProtocol.swift */,
+				071EF2E01EE8810F00C0116B /* Line.swift */,
+				071EF2E11EE8810F00C0116B /* Point.swift */,
+				071EF2E21EE8810F00C0116B /* Polygon.swift */,
+				071EF2E31EE8810F00C0116B /* PolygonError.swift */,
+				071EF2E41EE8810F00C0116B /* PolygonProtocol.swift */,
+				071EF2E51EE8810F00C0116B /* Rectangle.swift */,
+				071EF2E61EE8810F00C0116B /* Rotation.swift */,
+				071EF2E71EE8810F00C0116B /* Shape.swift */,
+				071EF2E81EE8810F00C0116B /* Size.swift */,
+				071EF2E91EE8810F00C0116B /* Triangle.swift */,
+				071EF2EA1EE8810F00C0116B /* Vector2+Points.swift */,
+				071EF2EB1EE8810F00C0116B /* VertexCollection.swift */,
+				071EF2C11EE8801B00C0116B /* Primitives */,
 				9648B3D0507C3A2F8430CF69 /* Supporting Files */,
 			);
 			name = GeometryTools;
@@ -122,6 +214,10 @@
 		77F77DAF0992F22217213927 /* GeometryToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				071EF3101EE8817A00C0116B /* AngleTests.swift */,
+				071EF3111EE8817A00C0116B /* CollisionDetectionTests.swift */,
+				071EF3121EE8817A00C0116B /* LineTests.swift */,
+				071EF3131EE8817A00C0116B /* PolygonTests.swift */,
 				C5AE7C0748B98CF9A42112E8 /* Supporting Files */,
 			);
 			name = GeometryToolsTests;
@@ -187,6 +283,7 @@
 			buildPhases = (
 				FE12D4391C8A3A6B772B08B0 /* Sources */,
 				A7B3931310485D87BC0F1606 /* Frameworks */,
+				8AB6DF96425DDBD152028E8B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,6 +301,7 @@
 			buildPhases = (
 				4FB8C0258E329797F7C74F5C /* Sources */,
 				761CDEC8AF387899A23B7196 /* Frameworks */,
+				B1638C4AD8AA38D4D0C0DE42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,7 +327,7 @@
 			);
 			name = "GeometryTools macOS";
 			productName = "GeometryTools macOS";
-			productReference = 6A7BEEB5E08E3988CD2ABE6C /* GeometryTools macOS.framework */;
+			productReference = 6A7BEEB5E08E3988CD2ABE6C /* GeometryTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D8436E8B83737049996108DB /* GeometryTools iOS */ = {
@@ -246,7 +344,7 @@
 			);
 			name = "GeometryTools iOS";
 			productName = "GeometryTools iOS";
-			productReference = 880554A91EEACD99053065E3 /* GeometryTools iOS.framework */;
+			productReference = 880554A91EEACD99053065E3 /* GeometryTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -257,6 +355,21 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					09259D58553996BA6AE82A3B = {
+						LastSwiftMigration = 0830;
+					};
+					C3D163E7838410FE38F37FC7 = {
+						LastSwiftMigration = 0830;
+					};
+					D195CFB9C162E2694AA5C640 = {
+						LastSwiftMigration = 0830;
+					};
+					D8436E8B83737049996108DB = {
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = AF40F1E993D43B002DC1439B /* Build configuration list for PBXProject "GeometryTools" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -278,11 +391,48 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8AB6DF96425DDBD152028E8B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Collections.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		B1638C4AD8AA38D4D0C0DE42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Collections.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FB8C0258E329797F7C74F5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071EF31A1EE8817A00C0116B /* PolygonTests.swift in Sources */,
+				071EF3161EE8817A00C0116B /* CollisionDetectionTests.swift in Sources */,
+				071EF3181EE8817A00C0116B /* LineTests.swift in Sources */,
+				071EF3141EE8817A00C0116B /* AngleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +440,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071EF2FA1EE8810F00C0116B /* Point.swift in Sources */,
+				071EF3081EE8810F00C0116B /* Size.swift in Sources */,
+				071EF2EC1EE8810F00C0116B /* Angle.swift in Sources */,
+				071EF2F61EE8810F00C0116B /* ConvexPolygonProtocol.swift in Sources */,
+				071EF3061EE8810F00C0116B /* Shape.swift in Sources */,
+				071EF3021EE8810F00C0116B /* Rectangle.swift in Sources */,
+				071EF30C1EE8810F00C0116B /* Vector2+Points.swift in Sources */,
+				071EF3001EE8810F00C0116B /* PolygonProtocol.swift in Sources */,
+				071EF2F41EE8810F00C0116B /* ConvexPolygonContainer.swift in Sources */,
+				071EF2F21EE8810F00C0116B /* ConvexPolygon.swift in Sources */,
+				071EF2FE1EE8810F00C0116B /* PolygonError.swift in Sources */,
+				071EF30E1EE8810F00C0116B /* VertexCollection.swift in Sources */,
+				071EF3041EE8810F00C0116B /* Rotation.swift in Sources */,
+				071EF2FC1EE8810F00C0116B /* Polygon.swift in Sources */,
+				071EF2EE1EE8810F00C0116B /* CollisionDetectable.swift in Sources */,
+				071EF2F81EE8810F00C0116B /* Line.swift in Sources */,
+				071EF2F01EE8810F00C0116B /* CollisionDetection.swift in Sources */,
+				071EF30A1EE8810F00C0116B /* Triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +465,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071EF2FB1EE8810F00C0116B /* Point.swift in Sources */,
+				071EF3091EE8810F00C0116B /* Size.swift in Sources */,
+				071EF2ED1EE8810F00C0116B /* Angle.swift in Sources */,
+				071EF2F71EE8810F00C0116B /* ConvexPolygonProtocol.swift in Sources */,
+				071EF3071EE8810F00C0116B /* Shape.swift in Sources */,
+				071EF3031EE8810F00C0116B /* Rectangle.swift in Sources */,
+				071EF30D1EE8810F00C0116B /* Vector2+Points.swift in Sources */,
+				071EF3011EE8810F00C0116B /* PolygonProtocol.swift in Sources */,
+				071EF2F51EE8810F00C0116B /* ConvexPolygonContainer.swift in Sources */,
+				071EF2F31EE8810F00C0116B /* ConvexPolygon.swift in Sources */,
+				071EF2FF1EE8810F00C0116B /* PolygonError.swift in Sources */,
+				071EF30F1EE8810F00C0116B /* VertexCollection.swift in Sources */,
+				071EF3051EE8810F00C0116B /* Rotation.swift in Sources */,
+				071EF2FD1EE8810F00C0116B /* Polygon.swift in Sources */,
+				071EF2EF1EE8810F00C0116B /* CollisionDetectable.swift in Sources */,
+				071EF2F91EE8810F00C0116B /* Line.swift in Sources */,
+				071EF2F11EE8810F00C0116B /* CollisionDetection.swift in Sources */,
+				071EF30B1EE8810F00C0116B /* Triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +490,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071EF31B1EE8817A00C0116B /* PolygonTests.swift in Sources */,
+				071EF3171EE8817A00C0116B /* CollisionDetectionTests.swift in Sources */,
+				071EF3191EE8817A00C0116B /* LineTests.swift in Sources */,
+				071EF3151EE8817A00C0116B /* AngleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,30 +562,42 @@
 		53904ECE27A8CF9E261B17D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		9973A8A63348BC7F20147C1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -403,14 +605,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -419,8 +624,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m.GeometryTools";
 				PRODUCT_NAME = GeometryTools;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -431,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -441,6 +649,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryTools/Info.plist;
@@ -452,6 +661,7 @@
 				PRODUCT_NAME = GeometryTools;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -460,15 +670,20 @@
 		B4668F801BB9B4578F6977C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -476,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -486,6 +702,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryTools/Info.plist;
@@ -497,6 +714,8 @@
 				PRODUCT_NAME = GeometryTools;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -506,14 +725,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -522,8 +744,11 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dn-m.GeometryTools";
 				PRODUCT_NAME = GeometryTools;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -533,15 +758,20 @@
 		EF82BFA5E69D3D56FB395F9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = GeometryToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
