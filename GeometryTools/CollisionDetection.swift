@@ -8,7 +8,7 @@
 
 import ArithmeticTools
 
-public func collision(_ a: Shape, _ b: Shape) -> Bool {
+public func collision(_ a: CollisionDetectable, _ b: CollisionDetectable) -> Bool {
     
     for a in a.collisionDetectable.polygons {
         for b in b.collisionDetectable.polygons {
