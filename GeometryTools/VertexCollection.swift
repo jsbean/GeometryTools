@@ -29,16 +29,6 @@ extension CircularArray where Element == Point {
         return edges.map { $0.vector }
     }
     
-    /// - Returns: `true` if vertices are arranged clockwise / counterclockwise. Otherwise,
-    /// `false`.
-    public var rotation: Rotation {
-        let sum = edges.reduce(Double(0)) { accum, cur in
-            let (a,b) = (cur.start, cur.end)
-            return accum + (b.x - a.x) * (b.y + a.y)
-        }
-        return sum > 0 ? .clockwise : .counterClockwise
-    }
-    
     /// - Returns: Array of triangles created with each adjacent triple of vertices.
     public var triangles: [Triangle] {
         return indices.map { index in
@@ -60,6 +50,16 @@ extension CircularArray where Element == Point {
             .map { zCrossProduct(p1: $0[0], center: $0[1], p2: $0[2]) }
             .map { $0.sign }
             .isHomogeneous
+    }
+    
+    /// - Returns: `true` if vertices are arranged clockwise / counterclockwise. Otherwise,
+    /// `false`.
+    public var rotation: Rotation {
+        let sum = edges.reduce(Double(0)) { accum, cur in
+            let (a,b) = (cur.start, cur.end)
+            return accum + (b.x - a.x) * (b.y + a.y)
+        }
+        return sum > 0 ? .clockwise : .counterClockwise
     }
 }
 
