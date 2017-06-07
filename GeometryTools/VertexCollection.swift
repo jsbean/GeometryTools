@@ -52,8 +52,7 @@ extension CircularArray where Element == Point {
             .isHomogeneous
     }
     
-    /// - Returns: `true` if vertices are arranged clockwise / counterclockwise. Otherwise,
-    /// `false`.
+    /// - Returns: Wheter vertices are arranged in a clockwise or counterclockwise fasion.
     public var rotation: Rotation {
         let sum = edges.reduce(Double(0)) { accum, cur in
             let (a,b) = (cur.start, cur.end)
