@@ -122,6 +122,7 @@ class PolygonTests: XCTestCase {
         let blockC = Polygon(vertices: points)
         let triangulated = blockC.triangulated
         XCTAssertEqual(triangulated.count, 6)
+        // FIXME: Add assertion!
     }
     
     func testBlockCTriangulatedClockwise() {
@@ -133,5 +134,13 @@ class PolygonTests: XCTestCase {
         let blockC = Polygon(vertices: points)
         let triangulated = blockC.triangulated
         XCTAssertEqual(triangulated.count, 6)
+        // FIXME: Add assertion!
+    }
+    
+    func testSum() {
+        let a = Polygon(vertices: [(0,0),(2,0),(2,2),(0,2)].map(Point.init))
+        let b = Polygon(vertices: [(3,3),(5,3),(5,5),(3,5)].map(Point.init))
+        let expected = Polygon(vertices: [(0,0),(2,0),(5,3),(5,5),(3,5),(0,2)].map(Point.init))
+        XCTAssertEqual(a + b, expected)
     }
 }

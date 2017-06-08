@@ -34,7 +34,7 @@ extension CircularArray where Element == Point {
                 guard
                     let penultimate = hull.penultimate,
                     let last = hull.last,
-                    !Triangle(penultimate, last, point).isConvex(rotation: .counterClockwise)
+                    crossProduct(penultimate, last, point) >= 0
                 else {
                     return hull + point
                 }
@@ -49,7 +49,7 @@ extension CircularArray where Element == Point {
             {
                 
                 // Base case: We have reached the end, and have succssfully populated the hull
-                guard index < vertices.count - 1 else {
+                guard index < vertices.count else {
                     return hull
                 }
                 
