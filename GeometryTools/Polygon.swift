@@ -36,18 +36,8 @@ public struct Polygon: PolygonProtocol {
         /// - There are no remaining vertices contained within its area.
         ///
         func isEar(_ triangle: Triangle, remainingVertices: [Point]) -> Bool {
-            
-            // For the triangle to be an ear, it must be convex, given the order of traversal.
-            guard triangle.isConvex(rotation: .counterClockwise) else {
-                return false
-            }
-            
-            // For the triangle to be an ear, it must not have any remaining vertices within
-            // its area.
-            guard !triangle.contains(anyOf: remainingVertices) else {
-                return false
-            }
-            
+            guard triangle.isConvex(rotation: .counterClockwise) else { return false }
+            guard !triangle.contains(anyOf: remainingVertices) else { return false }
             return true
         }
         

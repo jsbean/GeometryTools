@@ -63,22 +63,21 @@ extension PolygonProtocol {
     /// - Returns: `true` if a `PolygonProtocol` contains the given `point`.
     public func contains(_ point: Point) -> Bool {
         
-        func rayIntersection(edge: Line) -> Double? {
-            
-            let (a,b) = (edge.start, edge.end)
-            
-            // Check if the line crosses the horizontal line at y in either direction
-            // Return `nil` if there is no intersection
-            guard a.y <= point.y && b.y > point.y || b.y <= point.y && a.y > point.y else {
-                return nil
-            }
-            
-            // Return the point where the ray intersects the edge
-            return (b.x - b.x) * (point.y - a.y) / (b.y - a.y) + a.x
+        ///
+        func intersection(ofHorizontalRayFrom point: Point, through edge: Line) -> Double? {
+            return edge.x(y: point.y)
         }
         
-        // If the amount of crossings is odd, we contain the `point`. Otherwise, we don't.
-        return edges.flatMap(rayIntersection).filter { $0 < point.x }.count.isOdd
+        return edges
+            
+            // All of the points of the horizontal ray eminating from the point
+            .flatMap { edge in intersection(ofHorizontalRayFrom: point, through: edge) }
+            
+            // Only look at the points to the left
+            .filter { $0 < point.x }
+            
+            // If the amount of intersection points to the left is odd, we contain the point
+            .count.isOdd
     }
     
     /// - Returns: `true` if a `PolygonProtocol` contains any of the the given `points`.
@@ -91,47 +90,12 @@ extension PolygonProtocol {
     
     /// - Returns: A `Set` of all of the y-values at the given `x`.
     public func ys(at x: Double) -> Set<Double> {
-        
-        var result: Set<Double> = []
-        
-        for edge in edges {
-            
-            // Ensure that points are ordered in increasing order re: x values.
-            let (a,b, _) = swapped(edge.start, edge.end) { edge.start.x > edge.end.x }
-            
-            if x >= a.x && x <= b.x {
-                if (b.x - a.x) == 0 {
-                    result.formUnion([a.y, b.y])
-                } else {
-                    let y = (x - a.x) * (b.y - a.y) / (b.x - a.x) + b.y
-                    result.insert(y)
-                }
-            }
-        }
-        
-        return result
+        return Set(edges.flatMap { edge in edge.y(x: x) })
+
     }
     
     /// - Returns: A `Set` of all of the x-values at the given `y`.
     public func xs(at y: Double) -> Set<Double> {
-        
-        var result: Set<Double> = []
-        
-        for edge in edges {
-            
-            // Ensure that points are ordered in increasing order re: x values.
-            let (a,b, _) = swapped(edge.start,edge.end) { edge.start.y > edge.end.y }
-            
-            if y >= a.y && y <= b.y {
-                if (b.y - a.y) == 0 {
-                    result.formUnion([a.y, b.y])
-                } else {
-                    let y = (y - a.y) * (b.x - a.x) / (b.y - a.y) + b.x
-                    result.insert(y)
-                }
-            }
-        }
-        
-        return result
+        return Set(edges.flatMap { edge in edge.x(y: y) })
     }
 }

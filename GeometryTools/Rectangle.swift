@@ -132,7 +132,7 @@ public struct Rectangle: ConvexPolygonProtocol {
     
     /// - Returns: `true` if the given `point` is contained herein. Otherwise, `false`.
     public func contains(_ point: Point) -> Bool {
-        return (point.x >= minX && point.x <= maxX) && (point.y >= minY && point.y <= maxY)
+        return (minX...maxX).contains(point.x) && (minY...maxY).contains(point.y)
     }
 }
 

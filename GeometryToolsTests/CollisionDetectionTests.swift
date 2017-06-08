@@ -66,4 +66,16 @@ class CollisionDetectionTests: XCTestCase {
         
         XCTAssertEqual(expected, rect.xs(at: 75))
     }
+    
+    func testPolygonContainsPointTrue() {
+        let points = [(2,3),(0,3),(0,0),(2,0),(2,1),(1,1),(1,2),(2,2)].map(Point.init)
+        let blockC = Polygon(vertices: points)
+        XCTAssert(blockC.contains(Point(x: 0.5, y: 2.5)))
+    }
+    
+    func testPolygonContainsPointFalse() {
+        let points = [(2,3),(0,3),(0,0),(2,0),(2,1),(1,1),(1,2),(2,2)].map(Point.init)
+        let blockC = Polygon(vertices: points)
+        XCTAssertFalse(blockC.contains(Point(x: 0, y: 2)))
+    }
 }
