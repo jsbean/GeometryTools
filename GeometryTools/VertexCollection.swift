@@ -125,7 +125,3 @@ extension CircularArray where Element == Point {
         return sum > 0 ? .clockwise : .counterClockwise
     }
 }
-
-private func zCrossProduct(p1: Point, center: Point, p2: Point) -> Double {
-    return (p1.x - center.x) * (center.y - p2.y) - (p1.y - center.y) * (center.x - p2.x)
-}
