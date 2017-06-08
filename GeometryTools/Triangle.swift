@@ -60,10 +60,6 @@ public struct Triangle: ConvexPolygonProtocol {
 
     /// - Returns: `true` if `Triangle` is convex for the given `rotation`. Otherwise, `false`. 
     public func isConvex(rotation: Rotation) -> Bool {
-        
-        let (a,b,c) = (vertices[0], vertices[1], vertices[2])
-        let crossProduct = ((a.x * (c.y - b.y)) + (b.x * (a.y - c.y)) + (c.x * (b.y - a.y)))
-        
         switch rotation {
         case .counterClockwise:
             return crossProduct < 0 ? true : false
