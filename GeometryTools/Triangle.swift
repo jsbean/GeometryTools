@@ -28,6 +28,11 @@ public struct Triangle: ConvexPolygonProtocol {
         return Angle(radians: acos((a + b - c) / sqrt(4 * a * b)))
     }
     
+    public var crossProduct: Double {
+        let (a,b,c) = (vertices[0], vertices[1], vertices[2])
+        return ((a.x * (c.y - b.y)) + (b.x * (a.y - c.y)) + (c.x * (b.y - a.y)))
+    }
+    
     /// Vertices contained herein.
     public let vertices: VertexCollection
     
@@ -70,6 +75,7 @@ public struct Triangle: ConvexPolygonProtocol {
     /// - Returns: `true` if `Triangle` contains the given `point` in its area.
     public func contains(_ point: Point) -> Bool {
 
+        // zCrossProduct, then sign
         func sign(a: Point, b: Point, c: Point) -> FloatingPointSign {
             return ((a.x - c.x) * (b.y - c.y) - (b.x - c.x) * (a.y - c.y)).sign
         }

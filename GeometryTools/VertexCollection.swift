@@ -9,58 +9,79 @@
 import Collections
 import ArithmeticTools
 
+
+
 /// Circular collection of `Point` values.
 public typealias VertexCollection = CircularArray<Point>
 
 /// - Note: One day, we will be able to say: `extension VertexCollection`.
 extension CircularArray where Element == Point {
     
-//    public func sorted(by areInIncreasingOrder: (Point, Point) -> Bool) -> CircularArray {
-//        // TODO: Inject this into `CircularArray` in `dn-m/Collections`
-//        return CircularArray(self.map { $0 }.sorted(by: areInIncreasingOrder))
-//    }
-    
-    /// - Note: Uses gift wrapping algorithm
-    public var convexHull: CircularArray {
+    /// - Returns: The convex hull, or envelope, of `VertexCollection`.
+    /// - Note: Uses Gift Wrapping algorithm.
+    public var convexHull: VertexCollection {
         
+        // Creates a half-hull of the given `vertices`.
+        func halfHull(of vertices: VertexCollection) -> [Point] {
+
+            // Removes the illegitimate vertices from the hull.
+            func dropVertices(from hull: [Point], point: Point) -> [Point] {
+
+                // Ensure that we can construct a triangle from the penultimate and last 
+                // vertices from the hull, along with the given `point`.
+                // If the triangle is convex, we keep it, adding the `point` to the 
+                // accumulating hull.
+                guard
+                    let penultimate = hull.penultimate,
+                    let last = hull.last,
+                    !Triangle(penultimate, last, point).isConvex(rotation: .counterClockwise)
+                else {
+                    return hull + point
+                }
+
+                // If there are still more vertices left in the hull
+                return dropVertices(from: Array(hull.dropLast()), point: point)
+            }
+            
+            //
+            func addPoint(at index: Int, of vertices: VertexCollection, to hull: [Point])
+                -> [Point]
+            {
+                
+                // Base case: We have reached the end, and have succssfully populated the hull
+                guard index < vertices.count - 1 else {
+                    return hull
+                }
+                
+                // Drop the illegitimate vertices from the hull, with the current vertex.
+                let hull = dropVertices(from: hull, point: vertices[index])
+                
+                // Proceed to the next
+                return addPoint(at: index + 1, of: vertices, to: hull)
+            }
+            
+            return addPoint(at: 0, of: vertices, to: [])
+        }
+        
+        /// A triangle is convex by nature.
         guard count > 3 else {
             return self
         }
         
-        // TODO: Implement functional / recursive solution
-
-        // Sort vertices lexicographically (first by x, then by y in a tie)
+        // Sort vertices lexicographically (first by x, then by y if necessary)
         let vertices = sorted { $0.x < $1.x || ($0.x == $1.x && $0.y < $1.y) }
-
-        var lowerHull: [Point] = []
-        for i in 0..<vertices.count {
-            while lowerHull.count >= 2 &&
-                zCrossProduct(
-                    p1: lowerHull[lowerHull.count - 2],
-                    center: lowerHull[lowerHull.count - 1],
-                    p2: vertices[i]) <= 0
-            {
-                _ = lowerHull.popLast()!
-            }
-            lowerHull.append(vertices[i])
-        }
         
-        var upperHull: [Point] = []
-        var i = vertices.count - 1
-        while i >= 0 {
-            while upperHull.count >= 2 &&
-                zCrossProduct(
-                    p1: upperHull[upperHull.count - 2],
-                    center: upperHull[upperHull.count - 1],
-                    p2: vertices[i]) <= 0
-            {
-                _ = upperHull.popLast()!
-            }
-            upperHull.append(vertices[i])
-            i -= 1
-        }
-
-        return VertexCollection(lowerHull.dropLast() + upperHull.dropLast())
+        // Assemble the lower half of the hull.
+        let lower = halfHull(of: vertices)
+        
+        // Assemble the upper half of the hull (approaching the vertices from the reverse).
+        let upper = halfHull(of: vertices.reversed())
+        
+        // Chop off the last element of each, as these elements dovetail.
+        let hull = lower.dropLast() + upper.dropLast()
+        
+        // And we are done!
+        return VertexCollection(hull)
     }
     
     /// - returns: Array of the line values comprising the edges of the `PolygonProtocol`-
@@ -92,12 +113,7 @@ extension CircularArray where Element == Point {
     /// - Returns: `true` if the vertices contained herein form a convex polygon. Otherwise,
     /// `false`.
     public var formConvexPolygon: Bool {
-        return indices
-            .lazy
-            .map { index in self[from: index - 1, through: index + 1] }
-            .map { zCrossProduct(p1: $0[0], center: $0[1], p2: $0[2]) }
-            .map { $0.sign }
-            .isHomogeneous
+        return triangles.map { $0.crossProduct.sign }.isHomogeneous
     }
     
     /// - Returns: Wheter vertices are arranged in a clockwise or counterclockwise fasion.
@@ -108,6 +124,14 @@ extension CircularArray where Element == Point {
         }
         return sum > 0 ? .clockwise : .counterClockwise
     }
+    
+//    public func triangle(at index: Int) -> Triangle {
+//        return Triangle(
+//            self[circular: index - 1],
+//            self[circular: index],
+//            self[circular: index + 1]
+//        )
+//    }
 }
 
 private func zCrossProduct(p1: Point, center: Point, p2: Point) -> Double {
