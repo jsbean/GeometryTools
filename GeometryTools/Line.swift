@@ -10,34 +10,53 @@ import Darwin
 import Collections
 import ArithmeticTools
 
+/// Model of line.
 public struct Line {
     
-    public var length: Double {
-        return vector.length
-    }
+    // MARK: - Instance Properties
     
+    /// Vector of `Line`.
     public var vector: Vector2 {
         return Vector2(x: end.x - start.x, y: end.y - start.y)
     }
     
+    /// Length of `Line`.
+    public var length: Double {
+        return vector.length
+    }
+    
+    /// Start point.
     public let start: Point
+    
+    /// End point.
     public let end: Point
     
+    // MARK: - Initializers
+    
+    /// Creates a `Line` with the given `start` and `end` points.
     public init(start: Point, end: Point) {
         self.start = start
         self.end = end
     }
     
+    /// Create a `Line` with an array of `points`.
+    ///
+    /// - Warning: Will crash if given an array whose `count` is not two.
+    ///
     public init(points: [Point]) {
         
         guard points.count == 2 else {
-            fatalError("A triangle must have three vertices!")
+            fatalError("A line must have two vertices!")
         }
         
         self.start = points[0]
         self.end = points[1]
     }
     
+    // MARK: - Instance Methods
+    
+    /// - Returns: Vertical position for the given horizontal position, if it exists. 
+    /// Otherwise, `nil`.
     public func y(x: Double) -> Double? {
         
         // Ensure line is positive
@@ -50,7 +69,9 @@ public struct Line {
         
         return x * (b.y - a.y) / (b.x - a.x) + a.y
     }
-    
+ 
+    /// - Returns: Horizontal position for the given vertical position, if it exists.
+    /// Otherwise, `nil`.
     public func x(y: Double) -> Double? {
         
         // Ensure line is positive
@@ -65,8 +86,8 @@ public struct Line {
     }
 }
 
-/// - returns: If the given `predicate` is `true`, a tuple of `(b, a, true)`
+/// - returns: If the given `predicate` is `false`, a tuple of `(b, a, true)`
 /// Otherwise, `(a, b, false)`
-public func ensuring <T> (_ a: T, _ b: T, that predicate: () -> Bool) -> (T, T, Bool) {
+private func ensuring <T> (_ a: T, _ b: T, that predicate: () -> Bool) -> (T, T, Bool) {
     return predicate() ? (a, b, false) : (b, a, true)
 }
