@@ -12,15 +12,17 @@ import Collections
 /// Model of a triangle.
 public struct Triangle: ConvexPolygonProtocol {
     
+    /// Points comprising `Triangle`.
+    public var points: (p1: Point, center: Point, p2: Point) {
+        return (p1: vertices[0], center: vertices[1], p2: vertices[2])
+    }
+    
     // MARK: - Instance Properties
     
     /// - Returns: The angle of `Triangle`.
     public var angle: Angle {
         
-        let p1 = vertices[0]
-        let center = vertices[1]
-        let p2 = vertices[2]
-        
+        let (p1, center, p2) = points        
         let a = pow(center.x - p1.x, 2) + pow(center.y - p1.y, 2)
         let b = pow(center.x - p2.x, 2) + pow(center.y - p2.y, 2)
         let c = pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2)
@@ -29,8 +31,7 @@ public struct Triangle: ConvexPolygonProtocol {
     }
     
     public var crossProduct: Double {
-        let (a,b,c) = (vertices[0], vertices[1], vertices[2])
-        return ((a.x * (c.y - b.y)) + (b.x * (a.y - c.y)) + (c.x * (b.y - a.y)))
+        return GeometryTools.crossProduct(vertices[0], vertices[1], vertices[2])
     }
     
     /// Vertices contained herein.
@@ -92,4 +93,8 @@ extension Triangle: Equatable {
     public static func == (lhs: Triangle, rhs: Triangle) -> Bool {
         return lhs.vertices == rhs.vertices
     }
+}
+
+internal func crossProduct(_ a: Point, _ b: Point, _ c: Point) -> Double {
+    return ((a.x * (c.y - b.y)) + (b.x * (a.y - c.y)) + (c.x * (b.y - a.y)))
 }
