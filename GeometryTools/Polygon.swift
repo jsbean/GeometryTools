@@ -78,7 +78,7 @@ public struct Polygon: PolygonProtocol {
         return clipEar(at: 0, from: counterClockwise.vertices, into: [])
     }
     
-    /// - Returns:
+    /// - Returns: Convex hull of vertices in `Polygon`.
     public var convexHull: Polygon {
         return Polygon(vertices: vertices.convexHull)
     }
