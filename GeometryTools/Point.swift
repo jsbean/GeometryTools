@@ -50,6 +50,15 @@ extension Point: Equatable {
     }
 }
 
+extension Point: Hashable {
+    
+    // MARK: - Hashable
+    
+    public var hashValue: Int {
+        return "\(x)\(y)".hashValue
+    }
+}
+
 extension Point: CustomStringConvertible {
     
     // MARK: - CustomStringConvertible

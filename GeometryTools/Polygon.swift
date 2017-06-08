@@ -36,18 +36,8 @@ public struct Polygon: PolygonProtocol {
         /// - There are no remaining vertices contained within its area.
         ///
         func isEar(_ triangle: Triangle, remainingVertices: [Point]) -> Bool {
-            
-            // For the triangle to be an ear, it must be convex, given the order of traversal.
-            guard triangle.isConvex(rotation: .counterClockwise) else {
-                return false
-            }
-            
-            // For the triangle to be an ear, it must not have any remaining vertices within
-            // its area.
-            guard !triangle.contains(anyOf: remainingVertices) else {
-                return false
-            }
-            
+            guard triangle.isConvex(rotation: .counterClockwise) else { return false }
+            guard !triangle.contains(anyOf: remainingVertices) else { return false }
             return true
         }
         
@@ -88,6 +78,11 @@ public struct Polygon: PolygonProtocol {
         return clipEar(at: 0, from: counterClockwise.vertices, into: [])
     }
     
+    /// - Returns: Convex hull of vertices in `Polygon`.
+    public var convexHull: Polygon {
+        return Polygon(vertices: vertices.convexHull)
+    }
+    
     /// View of `Polygon` in which the vertices are ordered in a clockwise fashion.
     internal var clockwise: Polygon {
         return rotation == .clockwise ? self : Polygon(vertices: vertices.reversed())
@@ -116,6 +111,18 @@ public struct Polygon: PolygonProtocol {
     /// Create a unconstrained `Polygon` from any `PolygonProtocol`-conforming type.
     public init(_ polygon: PolygonProtocol) {
         self.vertices = polygon.vertices
+    }
+}
+
+extension Polygon: Monoid {
+    
+    /// Empty polygon.
+    public static let unit = Polygon(vertices: [])
+    
+    /// Creates union of two given `Polygon` values.
+    /// - Warning: Not yet implemented.
+    public static func + (lhs: Polygon, rhs: Polygon) -> Polygon {
+        return Polygon(vertices: (lhs.vertices + rhs.vertices).convexHull)
     }
 }
 
