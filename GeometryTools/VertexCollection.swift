@@ -124,14 +124,6 @@ extension CircularArray where Element == Point {
         }
         return sum > 0 ? .clockwise : .counterClockwise
     }
-    
-//    public func triangle(at index: Int) -> Triangle {
-//        return Triangle(
-//            self[circular: index - 1],
-//            self[circular: index],
-//            self[circular: index + 1]
-//        )
-//    }
 }
 
 private func zCrossProduct(p1: Point, center: Point, p2: Point) -> Double {
