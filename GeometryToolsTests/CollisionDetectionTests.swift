@@ -95,8 +95,11 @@ class CollisionDetectionTests: XCTestCase {
             (0,1),
             (0,0)
         ].map(Point.init)
+        
         let vertices = VertexCollection(points)
         let hull = vertices.convexHull
+        let expected = VertexCollection([(0,0),(2,0),(2,2),(0,2)].map(Point.init))
         
+        zip(hull, expected).forEach { a,b in XCTAssertEqual(a,b) }
     }
 }
