@@ -15,6 +15,54 @@ public typealias VertexCollection = CircularArray<Point>
 /// - Note: One day, we will be able to say: `extension VertexCollection`.
 extension CircularArray where Element == Point {
     
+//    public func sorted(by areInIncreasingOrder: (Point, Point) -> Bool) -> CircularArray {
+//        // TODO: Inject this into `CircularArray` in `dn-m/Collections`
+//        return CircularArray(self.map { $0 }.sorted(by: areInIncreasingOrder))
+//    }
+    
+    /// - Note: Uses gift wrapping algorithm
+    public var convexHull: CircularArray {
+        
+        guard count > 3 else {
+            return self
+        }
+        
+        // TODO: Implement functional / recursive solution
+
+        // Sort vertices lexicographically (first by x, then by y in a tie)
+        let vertices = sorted { $0.x < $1.x || ($0.x == $1.x && $0.y < $1.y) }
+
+        var lowerHull: [Point] = []
+        for i in 0..<vertices.count {
+            while lowerHull.count >= 2 &&
+                zCrossProduct(
+                    p1: lowerHull[lowerHull.count - 2],
+                    center: lowerHull[lowerHull.count - 1],
+                    p2: vertices[i]) <= 0
+            {
+                _ = lowerHull.popLast()!
+            }
+            lowerHull.append(vertices[i])
+        }
+        
+        var upperHull: [Point] = []
+        var i = vertices.count - 1
+        while i >= 0 {
+            while upperHull.count >= 2 &&
+                zCrossProduct(
+                    p1: upperHull[upperHull.count - 2],
+                    center: upperHull[upperHull.count - 1],
+                    p2: vertices[i]) <= 0
+            {
+                _ = upperHull.popLast()!
+            }
+            upperHull.append(vertices[i])
+            i -= 1
+        }
+
+        return VertexCollection(lowerHull + upperHull.dropFirst())
+    }
+    
     /// - returns: Array of the line values comprising the edges of the `PolygonProtocol`-
     /// conforming type.
     public var edges: [Line] {

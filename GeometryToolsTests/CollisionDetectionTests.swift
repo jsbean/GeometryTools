@@ -78,4 +78,25 @@ class CollisionDetectionTests: XCTestCase {
         let blockC = Polygon(vertices: points)
         XCTAssertFalse(blockC.contains(Point(x: 0, y: 2)))
     }
+    
+    func testConvexHull() {
+        
+        let points = [
+            (1.5,0.5),
+            (1.5,1.5),
+            (1,2),
+            (0.5,1.5),
+            (0.5,0.5),
+            (1,0),
+            (2,0),
+            (2,1),
+            (2,2),
+            (0,2),
+            (0,1),
+            (0,0)
+        ].map(Point.init)
+        let vertices = VertexCollection(points)
+        let hull = vertices.convexHull
+        
+    }
 }
