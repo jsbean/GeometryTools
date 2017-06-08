@@ -8,6 +8,7 @@
 
 import XCTest
 import Collections
+import ArithmeticTools
 @testable import GeometryTools
 
 class PolygonTests: XCTestCase {
@@ -142,5 +143,20 @@ class PolygonTests: XCTestCase {
         let b = Polygon(vertices: [(3,3),(5,3),(5,5),(3,5)].map(Point.init))
         let expected = Polygon(vertices: [(0,0),(2,0),(5,3),(5,5),(3,5),(0,2)].map(Point.init))
         XCTAssertEqual(a + b, expected)
+    }
+    
+    func testReduce() {
+        
+        let a = Polygon(vertices: [(0,0),(2,0),(2,2),(0,2)].map(Point.init))
+        let b = Polygon(vertices: [(3,3),(5,3),(5,5),(3,5)].map(Point.init))
+        let c = Polygon(vertices: [(0,6),(0,7),(-2,7),(-2,6)].map(Point.init))
+        
+        let expected = Polygon(
+            vertices: [(-2,6),(0,0),(2,0),(5,3),(5,5),(0,7),(-2,7)].map(Point.init)
+        )
+        
+        XCTAssertEqual(a + b + c, expected)
+        XCTAssertEqual([a,b,c].reduce(.unit, +), expected)
+        XCTAssertEqual([a,b,c].sum, expected)
     }
 }
