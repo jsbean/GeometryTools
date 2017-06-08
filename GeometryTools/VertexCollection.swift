@@ -43,7 +43,10 @@ extension CircularArray where Element == Point {
                 return dropVertices(from: Array(hull.dropLast()), point: point)
             }
             
-            //
+            // Adds the point at the given `index` of the given `vertices` to the given `hull`
+            // if, when added to the accumulating vertices in the `hull` creates a convex
+            // triangle. Otherwise, no point is added, and the vertex at the next index is 
+            // attempted.
             func addPoint(at index: Int, of vertices: VertexCollection, to hull: [Point])
                 -> [Point]
             {
