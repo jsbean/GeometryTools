@@ -100,6 +100,7 @@ class CollisionDetectionTests: XCTestCase {
         let hull = vertices.convexHull
         let expected = VertexCollection([(0,0),(2,0),(2,2),(0,2)].map(Point.init))
         
+        XCTAssertEqual(hull.count, expected.count)
         zip(hull, expected).forEach { a,b in XCTAssertEqual(a,b) }
     }
 }

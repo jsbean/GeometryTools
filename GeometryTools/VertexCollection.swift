@@ -60,7 +60,7 @@ extension CircularArray where Element == Point {
             i -= 1
         }
 
-        return VertexCollection(lowerHull + upperHull.dropFirst())
+        return VertexCollection(lowerHull.dropLast() + upperHull.dropLast())
     }
     
     /// - returns: Array of the line values comprising the edges of the `PolygonProtocol`-
