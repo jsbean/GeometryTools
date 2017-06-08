@@ -78,6 +78,11 @@ public struct Polygon: PolygonProtocol {
         return clipEar(at: 0, from: counterClockwise.vertices, into: [])
     }
     
+    /// - Returns:
+    public var convexHull: Polygon {
+        return Polygon(vertices: vertices.convexHull)
+    }
+    
     /// View of `Polygon` in which the vertices are ordered in a clockwise fashion.
     internal var clockwise: Polygon {
         return rotation == .clockwise ? self : Polygon(vertices: vertices.reversed())
@@ -117,8 +122,7 @@ extension Polygon: Monoid {
     /// Creates union of two given `Polygon` values.
     /// - Warning: Not yet implemented.
     public static func + (lhs: Polygon, rhs: Polygon) -> Polygon {
-        fatalError("Not yet implemented!")
-        //return Polygon(vertices: lhs.vertices + rhs.vertices)
+        return Polygon(vertices: (lhs.vertices + rhs.vertices).convexHull)
     }
 }
 

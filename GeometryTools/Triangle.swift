@@ -22,7 +22,7 @@ public struct Triangle: ConvexPolygonProtocol {
     /// - Returns: The angle of `Triangle`.
     public var angle: Angle {
         
-        let (p1, center, p2) = points        
+        let (p1, center, p2) = points
         let a = pow(center.x - p1.x, 2) + pow(center.y - p1.y, 2)
         let b = pow(center.x - p2.x, 2) + pow(center.y - p2.y, 2)
         let c = pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2)

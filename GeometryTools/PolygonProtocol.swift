@@ -63,7 +63,8 @@ extension PolygonProtocol {
     /// - Returns: `true` if a `PolygonProtocol` contains the given `point`.
     public func contains(_ point: Point) -> Bool {
         
-        ///
+        /// - Returns: The horizontal position of the intersection of horizontal ray shooting
+        /// from the given `point` through the given `edge`, if it exists. Otherwise, `nil`.
         func intersection(ofHorizontalRayFrom point: Point, through edge: Line) -> Double? {
             return edge.x(y: point.y)
         }
