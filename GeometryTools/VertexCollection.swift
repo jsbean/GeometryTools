@@ -9,8 +9,6 @@
 import Collections
 import ArithmeticTools
 
-
-
 /// Circular collection of `Point` values.
 public typealias VertexCollection = CircularArray<Point>
 

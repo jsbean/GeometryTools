@@ -40,6 +40,44 @@ public struct Point {
     }
 }
 
+extension Point {
+    
+    // MARK: - Point Arithmetic
+    
+    /// - Returns: The value contained herein for the given `axis`.
+    public subscript (axis: Axis) -> Double {
+        return axis == .horizontal ? x : y
+    }
+    
+    /// - Returns: `Point` value containing sums of their respective x- and y-values.
+    public static func + (lhs: Point, rhs: Point) -> Point {
+        return Point(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+    }
+    
+    /// - Returns: `Point` value containing differences of their respective x- and y-values.
+    public static func - (lhs: Point, rhs: Point) -> Point {
+        return Point(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+    }
+}
+
+/// - Returns: `Point` value containing the values of the given `point` each multiplied by the
+/// given `multiplier`.
+public func * (point: Point, multiplier: Double) -> Point {
+    return Point(x: point.x * multiplier, y: point.y * multiplier)
+}
+
+/// - Returns: `Point` value containing the values of the given `point` each multiplied by the
+/// given `multiplier`.
+public func * (multiplicand: Double, point: Point) -> Point {
+    return Point(x: point.x * multiplicand, y: point.y * multiplicand)
+}
+
+/// - Returns: `Point` value containing the values of the given `point` each divided by the
+/// given `divisor`.
+public func / (point: Point, divisor: Double) -> Point {
+    return Point(x: point.x / divisor, y: point.y / divisor)
+}
+
 extension Point: Equatable {
     
     // MARK: - Equatable
