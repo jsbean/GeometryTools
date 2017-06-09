@@ -57,6 +57,8 @@
 		07226BA51EEADE5A00A1E3D2 /* Extremum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA31EEADE5A00A1E3D2 /* Extremum.swift */; };
 		07226BA71EEADE6B00A1E3D2 /* Bound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA61EEADE6B00A1E3D2 /* Bound.swift */; };
 		07226BA81EEADE6B00A1E3D2 /* Bound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA61EEADE6B00A1E3D2 /* Bound.swift */; };
+		07226BAA1EEAE24400A1E3D2 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA91EEAE24400A1E3D2 /* PointTests.swift */; };
+		07226BAB1EEAE24400A1E3D2 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA91EEAE24400A1E3D2 /* PointTests.swift */; };
 		1440711982B41D8AD4ED7304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		437FF1B9A9A85DBB8077096B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		5C4BF7F6DE97390D8483C13A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
@@ -108,6 +110,7 @@
 		07226BA01EEADE4700A1E3D2 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Axis.swift; path = GeometryTools/Axis.swift; sourceTree = "<group>"; };
 		07226BA31EEADE5A00A1E3D2 /* Extremum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extremum.swift; path = GeometryTools/Extremum.swift; sourceTree = "<group>"; };
 		07226BA61EEADE6B00A1E3D2 /* Bound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bound.swift; path = GeometryTools/Bound.swift; sourceTree = "<group>"; };
+		07226BA91EEAE24400A1E3D2 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointTests.swift; path = GeometryToolsTests/PointTests.swift; sourceTree = "<group>"; };
 		59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDB7C93B33804F63AF722F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6A7BEEB5E08E3988CD2ABE6C /* GeometryTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +250,7 @@
 				071EF3121EE8817A00C0116B /* LineTests.swift */,
 				071EF3131EE8817A00C0116B /* PolygonTests.swift */,
 				C5AE7C0748B98CF9A42112E8 /* Supporting Files */,
+				07226BA91EEAE24400A1E3D2 /* PointTests.swift */,
 			);
 			name = GeometryToolsTests;
 			sourceTree = "<group>";
@@ -459,6 +463,7 @@
 			files = (
 				071EF31A1EE8817A00C0116B /* PolygonTests.swift in Sources */,
 				071EF3161EE8817A00C0116B /* CollisionDetectionTests.swift in Sources */,
+				07226BAA1EEAE24400A1E3D2 /* PointTests.swift in Sources */,
 				071EF3181EE8817A00C0116B /* LineTests.swift in Sources */,
 				071EF3141EE8817A00C0116B /* AngleTests.swift in Sources */,
 			);
@@ -526,6 +531,7 @@
 			files = (
 				071EF31B1EE8817A00C0116B /* PolygonTests.swift in Sources */,
 				071EF3171EE8817A00C0116B /* CollisionDetectionTests.swift in Sources */,
+				07226BAB1EEAE24400A1E3D2 /* PointTests.swift in Sources */,
 				071EF3191EE8817A00C0116B /* LineTests.swift in Sources */,
 				071EF3151EE8817A00C0116B /* AngleTests.swift in Sources */,
 			);
