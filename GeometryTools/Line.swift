@@ -13,6 +13,22 @@ import ArithmeticTools
 /// Model of line.
 public struct Line {
     
+    // MARK: - Type Properties
+    
+    public static func horizontal(at y: Double) -> Line {
+        return Line(
+            start: Point(x: .leastNormalMagnitude, y: y),
+            end: Point(x: .greatestFiniteMagnitude, y: y)
+        )
+    }
+    
+    public static func vertical(at x: Double) -> Line {
+        return Line(
+            start: Point(x: x, y: .leastNormalMagnitude),
+            end: Point(x: x, y: .greatestFiniteMagnitude)
+        )
+    }
+    
     // MARK: - Instance Properties
     
     /// Vector of `Line`.

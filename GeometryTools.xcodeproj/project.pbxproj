@@ -249,8 +249,8 @@
 				071EF3111EE8817A00C0116B /* CollisionDetectionTests.swift */,
 				071EF3121EE8817A00C0116B /* LineTests.swift */,
 				071EF3131EE8817A00C0116B /* PolygonTests.swift */,
-				C5AE7C0748B98CF9A42112E8 /* Supporting Files */,
 				07226BA91EEAE24400A1E3D2 /* PointTests.swift */,
+				C5AE7C0748B98CF9A42112E8 /* Supporting Files */,
 			);
 			name = GeometryToolsTests;
 			sourceTree = "<group>";
