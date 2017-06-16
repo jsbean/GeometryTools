@@ -45,4 +45,49 @@ class PointTests: XCTestCase {
         let point = Point(x: 200, y: 3)
         XCTAssertEqual(point / 2, Point(x: 100, y: 1.5))
     }
+    
+    func testScaledNoChange() {
+        let point = Point(x: 3, y: 7)
+        XCTAssertEqual(point.scaled(by: 1), point)
+    }
+    
+    func testScaledDoubleFromOrigin() {
+        let point = Point(x: 20, y: 40)
+        let expected = Point(x: 40, y: 80)
+        XCTAssertEqual(point.scaled(by: 2), expected)
+    }
+    
+    func testScaledTripleFromReferencePoint() {
+        let point = Point(x: 100, y: 100)
+        let reference = Point(x: 50, y: 50)
+        let expected = Point(x: 200, y: 200)
+        XCTAssertEqual(point.scaled(by: 3, from: reference), expected)
+    }
+    
+    func testRotateNoChange() {
+        let point = Point(x: 1, y: 1)
+        let angle = Angle.zero
+        let rotated = point.rotated(by: angle)
+        XCTAssertEqualWithAccuracy(rotated.x, point.x, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(rotated.y, point.y, accuracy: 0.0000001)
+    }
+    
+    func testRotated90DegreesAroundOrigin() {
+        let point = Point(x: 1, y: 1)
+        let angle = Angle(degrees: 90)
+        let rotated = point.rotated(by: angle)
+        let expected = Point(x: -1, y: 1)
+        XCTAssertEqualWithAccuracy(rotated.x, expected.x, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(rotated.y, expected.y, accuracy: 0.0000001)
+    }
+    
+    func testRotated90DegressAroundPoint() {
+        let point = Point(x: 10, y: 10)
+        let reference = Point(x: 5, y: 5)
+        let angle = Angle(degrees: 90)
+        let rotated = point.rotated(by: angle, around: reference)
+        let expected = Point(x: 0, y: 10)
+        XCTAssertEqualWithAccuracy(rotated.x, expected.x, accuracy: 0.0000001)
+        XCTAssertEqualWithAccuracy(rotated.y, expected.y, accuracy: 0.0000001)
+    }
 }

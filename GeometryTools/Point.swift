@@ -38,6 +38,20 @@ public struct Point {
     public func translatedBy(x ΔX: Double, y ΔY: Double) -> Point {
         return Point(x: x + ΔX, y: y + ΔY)
     }
+    
+    /// - Returns: `Point` scaled by the given `amount` from the given `reference` point.
+    public func scaled(by amount: Double, from reference: Point = Point()) -> Point {
+        return (self - reference) * amount + reference
+    }
+    
+    /// - Returns: `Point` rotated by the given `angle` around the given `reference` point.
+    public func rotated(by angle: Angle, around reference: Point = Point()) -> Point {
+        let p = self - reference
+        let radius = hypot(p.x, p.y)
+        let azimuth = atan2(p.x, p.y) + angle.radians
+        let rotated = Point(x: radius * cos(azimuth), y: radius * sin(azimuth))
+        return rotated + reference
+    }
 }
 
 extension Point {
