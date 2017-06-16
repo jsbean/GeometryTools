@@ -39,7 +39,7 @@ public struct Angle {
     
     /// Creates an `Angle` with the given `degrees` value.
     public init(degrees: Degrees) {
-        self.radians = degrees / 180.0 * .pi
+        self.radians = degrees * (.pi / 180)
     }
 }
 
