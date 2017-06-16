@@ -19,4 +19,9 @@ class AngleTests: XCTestCase {
         XCTAssertEqual(Angle(radians: 2 * .pi), Angle(degrees: 360))
         XCTAssertEqual(Angle(radians: 7/2 * .pi), Angle(degrees: -90))
     }
+    
+    func testAngleDegrees() {
+        XCTAssertEqual(Angle(degrees: 0).degrees, Angle(radians: 0).degrees)
+        XCTAssertEqual(Angle(degrees: 90).degrees, Angle(radians: .pi / 2).degrees)
+    }
 }
