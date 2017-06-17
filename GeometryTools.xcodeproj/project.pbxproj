@@ -63,6 +63,8 @@
 		07D3A0E51EF57F3F00641D15 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E31EF57F3F00641D15 /* Circle.swift */; };
 		07D3A0E71EF57F8000641D15 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E61EF57F8000641D15 /* Ellipse.swift */; };
 		07D3A0E81EF57F8000641D15 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E61EF57F8000641D15 /* Ellipse.swift */; };
+		07D3A0F01EF583EC00641D15 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0EF1EF583EC00641D15 /* Polyline.swift */; };
+		07D3A0F11EF583EC00641D15 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0EF1EF583EC00641D15 /* Polyline.swift */; };
 		1440711982B41D8AD4ED7304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		437FF1B9A9A85DBB8077096B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		5C4BF7F6DE97390D8483C13A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
@@ -117,6 +119,7 @@
 		07226BA91EEAE24400A1E3D2 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointTests.swift; path = GeometryToolsTests/PointTests.swift; sourceTree = "<group>"; };
 		07D3A0E31EF57F3F00641D15 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = GeometryTools/Circle.swift; sourceTree = "<group>"; };
 		07D3A0E61EF57F8000641D15 /* Ellipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ellipse.swift; path = GeometryTools/Ellipse.swift; sourceTree = "<group>"; };
+		07D3A0EF1EF583EC00641D15 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Polyline.swift; path = GeometryTools/Polyline.swift; sourceTree = "<group>"; };
 		59D1ABC485973CF65FD5EE55 /* GeometryTools iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDB7C93B33804F63AF722F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6A7BEEB5E08E3988CD2ABE6C /* GeometryTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +181,7 @@
 				071EF2E61EE8810F00C0116B /* Rotation.swift */,
 				07D3A0E31EF57F3F00641D15 /* Circle.swift */,
 				07D3A0E61EF57F8000641D15 /* Ellipse.swift */,
+				07D3A0EF1EF583EC00641D15 /* Polyline.swift */,
 			);
 			name = Primitives;
 			sourceTree = "<group>";
@@ -502,6 +506,7 @@
 				07D3A0E41EF57F3F00641D15 /* Circle.swift in Sources */,
 				071EF2F01EE8810F00C0116B /* CollisionDetection.swift in Sources */,
 				071EF31D1EE8854900C0116B /* Vector2.swift in Sources */,
+				07D3A0F01EF583EC00641D15 /* Polyline.swift in Sources */,
 				071EF30A1EE8810F00C0116B /* Triangle.swift in Sources */,
 				07226BA71EEADE6B00A1E3D2 /* Bound.swift in Sources */,
 			);
@@ -532,6 +537,7 @@
 				07D3A0E51EF57F3F00641D15 /* Circle.swift in Sources */,
 				071EF2F11EE8810F00C0116B /* CollisionDetection.swift in Sources */,
 				071EF31E1EE8854900C0116B /* Vector2.swift in Sources */,
+				07D3A0F11EF583EC00641D15 /* Polyline.swift in Sources */,
 				071EF30B1EE8810F00C0116B /* Triangle.swift in Sources */,
 				07226BA81EEADE6B00A1E3D2 /* Bound.swift in Sources */,
 			);
