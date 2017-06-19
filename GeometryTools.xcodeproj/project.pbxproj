@@ -59,6 +59,8 @@
 		07226BA81EEADE6B00A1E3D2 /* Bound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA61EEADE6B00A1E3D2 /* Bound.swift */; };
 		07226BAA1EEAE24400A1E3D2 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA91EEAE24400A1E3D2 /* PointTests.swift */; };
 		07226BAB1EEAE24400A1E3D2 /* PointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07226BA91EEAE24400A1E3D2 /* PointTests.swift */; };
+		0764851B1EF840200095FBB5 /* Line.Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764851A1EF840200095FBB5 /* Line.Segment.swift */; };
+		0764851C1EF840200095FBB5 /* Line.Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764851A1EF840200095FBB5 /* Line.Segment.swift */; };
 		07D3A0E41EF57F3F00641D15 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E31EF57F3F00641D15 /* Circle.swift */; };
 		07D3A0E51EF57F3F00641D15 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E31EF57F3F00641D15 /* Circle.swift */; };
 		07D3A0E71EF57F8000641D15 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E61EF57F8000641D15 /* Ellipse.swift */; };
@@ -117,6 +119,7 @@
 		07226BA31EEADE5A00A1E3D2 /* Extremum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extremum.swift; path = GeometryTools/Extremum.swift; sourceTree = "<group>"; };
 		07226BA61EEADE6B00A1E3D2 /* Bound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bound.swift; path = GeometryTools/Bound.swift; sourceTree = "<group>"; };
 		07226BA91EEAE24400A1E3D2 /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointTests.swift; path = GeometryToolsTests/PointTests.swift; sourceTree = "<group>"; };
+		0764851A1EF840200095FBB5 /* Line.Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Line.Segment.swift; path = GeometryTools/Line.Segment.swift; sourceTree = "<group>"; };
 		07D3A0E31EF57F3F00641D15 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = GeometryTools/Circle.swift; sourceTree = "<group>"; };
 		07D3A0E61EF57F8000641D15 /* Ellipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ellipse.swift; path = GeometryTools/Ellipse.swift; sourceTree = "<group>"; };
 		07D3A0EF1EF583EC00641D15 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Polyline.swift; path = GeometryTools/Polyline.swift; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 				071EF2DA1EE8810F00C0116B /* Angle.swift */,
 				071EF31C1EE8854900C0116B /* Vector2.swift */,
 				071EF2E01EE8810F00C0116B /* Line.swift */,
+				0764851A1EF840200095FBB5 /* Line.Segment.swift */,
 				071EF2E71EE8810F00C0116B /* Shape.swift */,
 				071EF2E61EE8810F00C0116B /* Rotation.swift */,
 				07D3A0E31EF57F3F00641D15 /* Circle.swift */,
@@ -490,6 +494,7 @@
 				071EF2EC1EE8810F00C0116B /* Angle.swift in Sources */,
 				071EF2F61EE8810F00C0116B /* ConvexPolygonProtocol.swift in Sources */,
 				07226BA41EEADE5A00A1E3D2 /* Extremum.swift in Sources */,
+				0764851B1EF840200095FBB5 /* Line.Segment.swift in Sources */,
 				071EF3061EE8810F00C0116B /* Shape.swift in Sources */,
 				071EF3021EE8810F00C0116B /* Rectangle.swift in Sources */,
 				071EF3001EE8810F00C0116B /* PolygonProtocol.swift in Sources */,
@@ -521,6 +526,7 @@
 				071EF2ED1EE8810F00C0116B /* Angle.swift in Sources */,
 				071EF2F71EE8810F00C0116B /* ConvexPolygonProtocol.swift in Sources */,
 				07226BA51EEADE5A00A1E3D2 /* Extremum.swift in Sources */,
+				0764851C1EF840200095FBB5 /* Line.Segment.swift in Sources */,
 				071EF3071EE8810F00C0116B /* Shape.swift in Sources */,
 				071EF3031EE8810F00C0116B /* Rectangle.swift in Sources */,
 				071EF3011EE8810F00C0116B /* PolygonProtocol.swift in Sources */,

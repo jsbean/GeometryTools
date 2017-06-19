@@ -52,6 +52,20 @@ public struct Point {
         let rotated = Point(x: radius * cos(azimuth), y: radius * sin(azimuth))
         return rotated + reference
     }
+    
+    public func reflected(over line: Line) -> Point {
+        switch line {
+        case .horizontal(let y):
+            return Point(x: self.x, y: y - self.y)
+        case .vertical(let x):
+            return Point(x: x - self.x, y: self.y)
+        case let .slanted(m,k):
+            let denom = pow(m,2) + 1
+            let x = ((2 * (m * (self.y - k) + self.x)) / denom) - self.x
+            let y = ((2 * (m * (m * (self.y - k) + self.x))) / denom) + (2 * k - self.y)
+            return Point(x: x, y: y)
+        }
+    }
 }
 
 extension Point {
