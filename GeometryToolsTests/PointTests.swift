@@ -108,6 +108,10 @@ class PointTests: XCTestCase {
     }
     
     func testReflectedOverLine() {
-        
+        let point = Point(x: -1, y: 1)
+        let line = Line(slope: 1, intercept: 0)
+        let result = point.reflected(over: line)
+        let expected = Point(x: 1, y: -1)
+        XCTAssertEqual(result, expected)
     }
 }

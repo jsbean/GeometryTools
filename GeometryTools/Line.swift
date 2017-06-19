@@ -18,7 +18,11 @@ public enum Line {
     case slanted(slope: Double, intercept: Double)
     
     public init(slope: Double, intercept: Double) {
-        self = .slanted(slope: slope, intercept: intercept)
+        self = slope == .infinity
+            ? .vertical(.nan)
+            : slope == 0
+                ? .horizontal(intercept)
+                : .slanted(slope: slope, intercept: intercept)
     }
     
     public func y(x: Double) -> Double {
@@ -29,6 +33,34 @@ public enum Line {
             return y
         case let .slanted(slope, intercept):
             return slope == .infinity ? x : slope * x + intercept
-        }   
+        }
+    }
+    
+    public func perpendicular(containing point: Point) -> Line {
+        switch self {
+        case .horizontal:
+            return .vertical(point.x)
+        case .vertical:
+            return .horizontal(point.y)
+        case let .slanted(slope, _):
+            let slope = -1 / slope
+            return .slanted(slope: slope, intercept: (slope * -point.x) + point.y)
+        }
+    }
+}
+
+extension Line: Equatable {
+    
+    public static func == (lhs: Line, rhs: Line) -> Bool {
+        switch (lhs,rhs) {
+        case let (.vertical(a), .vertical(b)):
+            return a == b
+        case let (.horizontal(a), .horizontal(b)):
+            return a == b
+        case let (.slanted(slopeA, interceptA), .slanted(slopeB, interceptB)):
+            return slopeA == slopeB && interceptA == interceptB
+        default:
+            return false
+        }
     }
 }
