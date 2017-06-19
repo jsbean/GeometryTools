@@ -90,4 +90,24 @@ class PointTests: XCTestCase {
         XCTAssertEqualWithAccuracy(rotated.x, expected.x, accuracy: 0.0000001)
         XCTAssertEqualWithAccuracy(rotated.y, expected.y, accuracy: 0.0000001)
     }
+    
+    func testReflectedOverXAxis() {
+        let point = Point(x: -10, y: 10)
+        let line = Line.horizontal(0)
+        let result = point.reflected(over: line)
+        let expected = Point(x: -10, y: -10)
+        XCTAssertEqual(result, expected)
+    }
+    
+    func testReflectedOverYAxis() {
+        let point = Point(x: -10, y: 10)
+        let line = Line.vertical(0)
+        let result = point.reflected(over: line)
+        let expected = Point(x: 10, y: 10)
+        XCTAssertEqual(result, expected)
+    }
+    
+    func testReflectedOverLine() {
+        
+    }
 }

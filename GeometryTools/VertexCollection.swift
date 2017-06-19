@@ -87,9 +87,9 @@ extension CircularArray where Element == Point {
     
     /// - returns: Array of the line values comprising the edges of the `PolygonProtocol`-
     /// conforming type.
-    public var edges: [Line] {
+    public var edges: [Line.Segment] {
         return indices.map { index in
-            Line(points: self[from: index, through: index + 1])
+            Line.Segment(points: self[from: index, through: index + 1])
         }
     }
     

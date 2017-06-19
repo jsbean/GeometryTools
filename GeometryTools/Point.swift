@@ -52,6 +52,10 @@ public struct Point {
         let rotated = Point(x: radius * cos(azimuth), y: radius * sin(azimuth))
         return rotated + reference
     }
+    
+    public func reflected(over line: Line) -> Point {
+        return self
+    }
 }
 
 extension Point {

@@ -35,7 +35,7 @@ extension PolygonProtocol {
 
     /// - returns: Array of the line values comprising the edges of the `PolygonProtocol`-
     /// conforming type.
-    public var edges: [Line] {
+    public var edges: [Line.Segment] {
         return vertices.edges
     }
     
@@ -65,7 +65,9 @@ extension PolygonProtocol {
         
         /// - Returns: The horizontal position of the intersection of horizontal ray shooting
         /// from the given `point` through the given `edge`, if it exists. Otherwise, `nil`.
-        func intersection(ofHorizontalRayFrom point: Point, through edge: Line) -> Double? {
+        func intersection(ofHorizontalRayFrom point: Point, through edge: Line.Segment)
+            -> Double?
+        {
             return edge.x(y: point.y)
         }
         
