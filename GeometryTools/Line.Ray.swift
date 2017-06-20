@@ -21,8 +21,7 @@ extension Line {
         }
         
         public init(_ segment: Segment) {
-            let slope = (segment.end.y - segment.start.y) / (segment.end.x - segment.start.x)
-            self.init(point: segment.start, slope: slope)
+            self.init(point: segment.start, slope: segment.slope)
         }
         
         public func point(at distance: Double) -> Point {
