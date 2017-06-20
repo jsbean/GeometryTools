@@ -20,6 +20,10 @@ extension Line {
             self.slope = slope
         }
         
+        public init(_ segment: Segment) {
+            self.init(point: segment.start, slope: segment.slope)
+        }
+        
         public func point(at distance: Double) -> Point {
             let r = sqrt(1 + pow(slope,2))
             return Point(x: point.x + distance / r, y: point.y + (distance * slope) / r)

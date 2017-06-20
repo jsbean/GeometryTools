@@ -41,6 +41,11 @@ extension Line {
             return vector.length
         }
         
+        /// Slope.
+        public var slope: Double {
+            return (end.y - start.y) / (end.x - start.x)
+        }
+        
         /// Start point.
         public let start: Point
         

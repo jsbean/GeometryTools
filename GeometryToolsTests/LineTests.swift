@@ -57,4 +57,10 @@ class LineTests: XCTestCase {
         let expected = Point(x: 1, y: 1)
         XCTAssertEqual(ray.point(at: distance), expected)
     }
+    
+    func testInitWithSegment() {
+        let segment = Line.Segment(start: Point(x: 1, y: 1), end: Point(x: 5, y: 5))
+        let line = Line(segment)
+        XCTAssertEqual(line, .slanted(slope: 1, intercept: 0))
+    }
 }

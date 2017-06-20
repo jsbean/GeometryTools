@@ -17,6 +17,19 @@ public enum Line {
     case horizontal(Double)
     case slanted(slope: Double, intercept: Double)
     
+    public init(_ segment: Line.Segment) {
+
+        switch segment.slope {
+        case 0:
+            self = .horizontal(segment.start.x)
+        case Double.nan:
+            self = .horizontal(segment.start.x)
+        default:
+            let intercept = segment.start.y - (segment.slope * segment.start.x)
+            self = .slanted(slope: segment.slope, intercept: intercept)
+        }
+    }
+    
     public init(slope: Double, intercept: Double) {
         self = slope == .infinity
             ? .vertical(.nan)
