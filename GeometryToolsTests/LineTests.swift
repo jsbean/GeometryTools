@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Darwin
 import GeometryTools
 
 class LineTests: XCTestCase {
@@ -48,5 +49,12 @@ class LineTests: XCTestCase {
         let result = line.perpendicular(containing: point)
         let expected = Line(slope: -1/2, intercept: 1)
         XCTAssertEqual(result, expected)
+    }
+    
+    func testRayPointAtDistance() {
+        let ray = Line.Ray(point: Point(), slope: 1)
+        let distance: Double = hypot(1,1)
+        let expected = Point(x: 1, y: 1)
+        XCTAssertEqual(ray.point(at: distance), expected)
     }
 }
