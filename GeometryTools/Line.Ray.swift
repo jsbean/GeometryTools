@@ -19,21 +19,16 @@ extension Line {
         case slanted(point: Point, slope: Double)
         
         public init(_ segment: Segment) {
-            
-            switch segment.slope {
-            
-            case 0:
+
+            if segment.start.y == segment.end.y {
                 self = segment.start.x < segment.end.x
                     ? .right(segment.start)
                     : .left(segment.start)
-                
-            case Double.infinity, Double.nan:
-                self = .up(segment.start)
-                
-            case -Double.infinity, -Double.nan:
-                self = .down(segment.start)
-                
-            default:
+            } else if segment.start.x == segment.end.x {
+                self = segment.start.y < segment.end.y
+                    ? .up(segment.start)
+                    : .down(segment.start)
+            } else {
                 self = .slanted(point: segment.start, slope: segment.slope)
             }
         }
