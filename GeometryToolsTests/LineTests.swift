@@ -52,7 +52,8 @@ class LineTests: XCTestCase {
     }
     
     func testRayPointAtDistance() {
-        let ray = Line.Ray(point: Point(), slope: 1)
+        let segment = Line.Segment(start: Point(), end: Point(x: 1, y: 1))
+        let ray = Line.Ray(segment)
         let distance: Double = hypot(1,1)
         let expected = Point(x: 1, y: 1)
         XCTAssertEqual(ray.point(at: distance), expected)
@@ -62,5 +63,45 @@ class LineTests: XCTestCase {
         let segment = Line.Segment(start: Point(x: 1, y: 1), end: Point(x: 5, y: 5))
         let line = Line(segment)
         XCTAssertEqual(line, .slanted(slope: 1, intercept: 0))
+    }
+    
+    func testRayInitWithSegmentVerticalUp() {
+        let segment = Line.Segment(start: Point(), end: Point(x: 0, y: 10))
+        let ray = Line.Ray(segment)
+        let expected = Line.Ray.up(Point())
+        XCTAssertEqual(ray, expected)
+    }
+    
+    func testRayInitWithSegmentVerticalDown() {
+        let segment = Line.Segment(start: Point(x: 0, y: 10), end: Point())
+        let ray = Line.Ray(segment)
+        let expected = Line.Ray.down(Point(x: 0, y: 10))
+        XCTAssertEqual(ray, expected)
+    }
+    
+    func testRayInitWithSegmentHorizontalLeft() {
+        let segment = Line.Segment(start: Point(x: 10, y: 0), end: Point())
+        let ray = Line.Ray(segment)
+        let expected = Line.Ray.left(Point(x: 10, y: 0))
+        XCTAssertEqual(ray, expected)
+    }
+    
+    func testRayInitWithSegmentHorizontalRight() {
+        let segment = Line.Segment(start: Point(), end: Point(x: 10, y: 0))
+        let ray = Line.Ray(segment)
+        let expected = Line.Ray.right(Point())
+        XCTAssertEqual(ray, expected)
+    }
+    
+    func testRayPointAtDistanceVertical() {
+        let ray = Line.Ray.up(Point())
+        let expected = Point(x: 0, y: 10)
+        XCTAssertEqual(ray.point(at: 10), expected)
+    }
+    
+    func testRayPointAtDistanceHorizontal() {
+        let ray = Line.Ray.left(Point())
+        let expected = Point(x: -10, y: 0)
+        XCTAssertEqual(ray.point(at: 10), expected)
     }
 }
