@@ -35,7 +35,7 @@ public struct Point {
     }
     
     /// - returns: `Point` translated by the given `x` and `y` values.
-    public func translatedBy(x ΔX: Double, y ΔY: Double) -> Point {
+    public func translatedBy(x ΔX: Double = 0, y ΔY: Double = 0) -> Point {
         return Point(x: x + ΔX, y: y + ΔY)
     }
     
