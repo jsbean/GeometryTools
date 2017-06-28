@@ -87,6 +87,10 @@ public struct Rectangle: ConvexPolygonProtocol {
         self.size = Size(width: width, height: height)
     }
     
+    public init(width: Double, height: Double) {
+        self.init(x: 0, y: 0, width: width, height: height)
+    }
+    
     /// Creates a `Rectangle` with the given `vertices`.
     ///
     /// - Warning: Will crash if given invalid vertices.
