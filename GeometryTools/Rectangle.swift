@@ -160,22 +160,12 @@ extension Rectangle: Monoid {
     public static let unit = Rectangle()
     
     public static func + (lhs: Rectangle, rhs: Rectangle) -> Rectangle {
-        let minY = least(lhs.minY, lhs.minY)
-        let minX = least(lhs.minX, rhs.minX)
-        let maxY = greatest(lhs.maxY, rhs.maxY)
-        let maxX = greatest(lhs.maxX, rhs.maxX)
+        let minY = lesserOf(lhs.minY, lhs.minY)
+        let minX = lesserOf(lhs.minX, rhs.minX)
+        let maxY = greaterOf(lhs.maxY, rhs.maxY)
+        let maxX = greaterOf(lhs.maxX, rhs.maxX)
         let origin = Point(x: minX, y: minY)
         let size = Size(width: maxX - minX, height: maxY - minY)
         return Rectangle(origin: origin, size: size)
     }
-}
-
-// TODO: Move to dn-m/ArithmeticTools
-func greatest <T: Comparable> (_ a: T, _ b: T) -> T {
-    return a > b ? a : b
-}
-
-// TODO: Move to dn-m/ArithmeticTools
-func least <T: Comparable> (_ a: T, _ b: T) -> T {
-    return a < b ? a : b
 }
