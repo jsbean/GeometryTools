@@ -32,7 +32,7 @@ public protocol PolygonProtocol: Shape, CollisionDetectable {
 }
 
 extension PolygonProtocol {
-
+    
     /// - returns: Array of the line values comprising the edges of the `PolygonProtocol`-
     /// conforming type.
     public var edges: [Line.Segment] {
