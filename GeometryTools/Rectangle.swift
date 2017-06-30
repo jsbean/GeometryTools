@@ -9,11 +9,17 @@
 import Collections
 import ArithmeticTools
 
+
+
 /// A structure that contains the location and dimensions of a rectangle.
 ///
 /// - TODO: Consider storing vertices as with `Polygon`, as opposed to being computed.
 ///
 public struct Rectangle: ConvexPolygonProtocol {
+    
+    public enum ScaleAnchor {
+        case origin, center
+    }
     
     // MARK: - Type Properties
     
@@ -148,6 +154,21 @@ public struct Rectangle: ConvexPolygonProtocol {
     /// - Returns: `true` if the given `point` is contained herein. Otherwise, `false`.
     public func contains(_ point: Point) -> Bool {
         return (minX...maxX).contains(point.x) && (minY...maxY).contains(point.y)
+    }
+    
+    /// - Returns: `Rectangle` with dimensions scaled by the given `value` around the given 
+    /// `anchor`.
+    public func scaled(by value: Double, around anchor: ScaleAnchor) -> Rectangle {
+        switch anchor {
+        case .origin:
+            return Rectangle(origin: origin, size: size.scaled(by: value))
+        case .center:
+            let size = self.size.scaled(by: value)
+            return Rectangle(
+                origin: Point(x: center.x - 0.5 * size.width, y: center.y + 0.5 * size.height),
+                size: size.scaled(by: value)
+            )
+        }
     }
 }
 
