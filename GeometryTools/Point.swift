@@ -29,14 +29,19 @@ public struct Point {
     
     // MARK: - Instance Properties
     
-    /// - returns: The distance to the given `other` point.
+    /// - Returns: The distance to the given `other` point.
     public func distance(to other: Point) -> Double {
         return hypot(other.x - self.x, other.y - self.y)
     }
     
-    /// - returns: `Point` translated by the given `x` and `y` values.
+    /// - Returns: `Point` translated by the given `x` and `y` values.
     public func translatedBy(x ΔX: Double = 0, y ΔY: Double = 0) -> Point {
         return Point(x: x + ΔX, y: y + ΔY)
+    }
+    
+    /// - Returns: `Point` translated by the given `point`.
+    public func translated(by point: Point) -> Point {
+        return translatedBy(x: point.x, y: point.y)
     }
     
     /// - Returns: `Point` scaled by the given `amount` from the given `reference` point.
