@@ -155,17 +155,27 @@ extension Rectangle: Equatable {
     }
 }
 
-extension Rectangle: Monoid {
+extension Array where Iterator.Element == Rectangle {
     
-    public static let unit = Rectangle()
-    
-    public static func + (lhs: Rectangle, rhs: Rectangle) -> Rectangle {
-        let minY = lesserOf(lhs.minY, lhs.minY)
-        let minX = lesserOf(lhs.minX, rhs.minX)
-        let maxY = greaterOf(lhs.maxY, rhs.maxY)
-        let maxX = greaterOf(lhs.maxX, rhs.maxX)
-        let origin = Point(x: minX, y: minY)
-        let size = Size(width: maxX - minX, height: maxY - minY)
-        return Rectangle(origin: origin, size: size)
+    public var sum: Rectangle {
+        
+        guard !self.isEmpty else {
+            return .zero
+        }
+        
+        let (first,rest) = self.destructured!
+        var minX = first.minX
+        var minY = first.minY
+        var maxX = first.maxX
+        var maxY = first.maxX
+        for rect in rest {
+            if rect.minX < minX { minX = rect.minX }
+            if rect.maxX > maxX { maxX = rect.maxX }
+            if rect.minY < minY { minY = rect.minY }
+            if rect.maxY > maxY { maxY = rect.maxY }
+        }
+        let width = maxX - minX
+        let height = maxY - minY
+        return Rectangle(x: minX, y: minY, width: width, height: height)
     }
 }
