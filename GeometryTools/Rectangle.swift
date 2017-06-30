@@ -67,6 +67,11 @@ public struct Rectangle: ConvexPolygonProtocol {
         return size.width == 0 || size.height == 0
     }
     
+    /// Center point.
+    public var center: Point {
+        return Point(x: midX, y: midY)
+    }
+    
     /// Origin.
     public let origin: Point
     
