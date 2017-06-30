@@ -86,6 +86,12 @@ public struct Rectangle: ConvexPolygonProtocol {
         self.size = size
     }
     
+    /// Creates a `Rectangle` with the given `center` and the given `size`.
+    public init(center: Point, size: Size) {
+        self.origin = Point(x: center.x - 0.5 * size.width, y: center.y + 0.5 * size.height)
+        self.size = size
+    }
+    
     /// Creates a `Rectangle` with the given `x`, `y`, `width`, and `height` values.
     public init(x: Double, y: Double, width: Double, height: Double) {
         self.origin = Point(x: x, y: y)
