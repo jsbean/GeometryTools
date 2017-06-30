@@ -24,6 +24,10 @@ public struct Size {
         self.width = width
         self.height = height
     }
+    
+    public func scaled(by value: Double) -> Size {
+        return Size(width: width * value, height: height * value)
+    }
 }
 
 extension Size: Equatable {
