@@ -167,7 +167,7 @@ extension Array where Iterator.Element == Rectangle {
         var minX = first.minX
         var minY = first.minY
         var maxX = first.maxX
-        var maxY = first.maxX
+        var maxY = first.maxY
         for rect in rest {
             if rect.minX < minX { minX = rect.minX }
             if rect.maxX > maxX { maxX = rect.maxX }
