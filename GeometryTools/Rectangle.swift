@@ -104,8 +104,19 @@ public struct Rectangle: ConvexPolygonProtocol {
         self.size = Size(width: width, height: height)
     }
     
+    /// Creates a `Rectangle` with the given `width` and `height`, with an origin of `Point()`.
     public init(width: Double, height: Double) {
         self.init(x: 0, y: 0, width: width, height: height)
+    }
+    
+    /// Creates a `Rectangle` with the given `minX`, `minY`, `maxX`, and `maxY` values.
+    public init(minX: Double, minY: Double, maxX: Double, maxY: Double) {
+        precondition(maxX >= minX)
+        precondition(maxY >= minY)
+        let origin = Point(x: minX, y: minY)
+        let width = maxX - minX
+        let height = maxY - minY
+        self.init(origin: origin, size: Size(width: width, height: height))
     }
     
     /// Creates a `Rectangle` with the given `vertices`.
