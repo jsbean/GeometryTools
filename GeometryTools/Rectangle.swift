@@ -166,7 +166,18 @@ public struct Rectangle: ConvexPolygonProtocol {
     public func contains(_ point: Point) -> Bool {
         return (minX...maxX).contains(point.x) && (minY...maxY).contains(point.y)
     }
-    
+
+    /// - Returns: `Rectangle` translated by the given `x` and `y` values.
+    public func translatedBy(x: Double = 0, y: Double = 0) -> Rectangle {
+        return translated(by: Point(x: x, y: 0))
+    }
+
+    /// - Returns: `Rectangle` translated by the given `point`.
+    public func translated(by point: Point) -> Rectangle {
+        let origin = self.origin.translated(by: point)
+        return Rectangle(origin: origin, size: size)
+    }
+
     /// - Returns: `Rectangle` with dimensions scaled by the given `value` around the given 
     /// `anchor`.
     public func scaled(by value: Double, around anchor: ScaleAnchor) -> Rectangle {
