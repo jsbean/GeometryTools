@@ -39,3 +39,13 @@ extension Size: Equatable {
         return lhs.width == rhs.width && lhs.height == rhs.height
     }
 }
+
+/// - Returns: `Size` scaled by the given right-hand-side value.
+public func * (lhs: Size, rhs: Double) -> Size {
+    return Size(width: lhs.width * rhs, height: lhs.height * rhs)
+}
+
+/// - Returns: `Size` scaled by the given left-hand-side value.
+public func * (lhs: Double, rhs: Size) -> Size {
+    return Size(width: rhs.width * lhs, height: rhs.height * lhs)
+}
