@@ -93,6 +93,11 @@ extension Point {
     }
 }
 
+/// Negates each of the values of the given `point`.
+public prefix func - (point: Point) -> Point {
+    return Point(x: -point.x, y: -point.y)
+}
+
 /// - Returns: `Point` value containing the values of the given `point` each multiplied by the
 /// given `multiplier`.
 public func * (point: Point, multiplier: Double) -> Point {
