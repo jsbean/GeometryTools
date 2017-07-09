@@ -28,6 +28,15 @@ public struct Rectangle: ConvexPolygonProtocol {
 
     // MARK: - Instance Properties
 
+    /// A `Rectangle` geometrically equivalent to this one, with positive `height`
+    /// and `width`.
+    public var normalized: Rectangle {
+        return Rectangle(
+            origin: Point(x: minX, y: minY),
+            size: Size(width: maxX-minX, height: maxY-minY)
+        )
+    }
+
     /// Vertices comprising `Rectangle`.
     public var vertices: VertexCollection {
         let topLeft = Point(x: minX, y: maxY)
@@ -192,6 +201,7 @@ public struct Rectangle: ConvexPolygonProtocol {
             )
         }
     }
+
 }
 
 extension Rectangle: Equatable {
