@@ -38,6 +38,20 @@ class RectangleTests: XCTestCase {
         XCTAssertEqual(r.normalized, expected)
     }
 
+    // MARK - scaled(by:, around:)
+
+    func testScaled() {
+        let r = Rectangle(origin: Point(x: 1, y: 5), size: Size(width: 2, height: 3))
+        let expected = Rectangle(origin: Point(x: 1, y: 5), size: Size(width: 6, height: 9))
+        XCTAssertEqual(r.scaled(by: 3, around: .origin), expected)
+    }
+
+    func testScaledAroundCenter() {
+        let r = Rectangle(origin: Point(x: 1, y: 5), size: Size(width: 2, height: 3))
+        let expected = Rectangle(origin: Point(x: -1, y: 2), size: Size(width: 6, height: 9))
+        XCTAssertEqual(r.scaled(by: 3, around: .center), expected)
+    }
+
     // MARK - scaledBy(width:, height:, around:)
 
     func testScaledBy() {
