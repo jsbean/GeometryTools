@@ -73,6 +73,8 @@
 		437FF1B9A9A85DBB8077096B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB7C93B33804F63AF722F5 /* Foundation.framework */; };
 		5C4BF7F6DE97390D8483C13A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
 		5E7FDEB2E3CAD141D408B6C7 /* GeometryTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CC342F757C18B4D01268B653 /* GeometryTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		900B71FB1F127C610058CDF9 /* RectangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900B71FA1F127C610058CDF9 /* RectangleTests.swift */; };
+		900B71FC1F127C610058CDF9 /* RectangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900B71FA1F127C610058CDF9 /* RectangleTests.swift */; };
 		B6D3630F16CDF22A19AD879B /* GeometryTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CC342F757C18B4D01268B653 /* GeometryTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF83CBD5F4A47FBC67050591 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8000F38E6269F2F330A19C01 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +134,7 @@
 		7125917D20CD33D272889EE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeometryTools/Info.plist; sourceTree = "<group>"; };
 		8000F38E6269F2F330A19C01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		880554A91EEACD99053065E3 /* GeometryTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeometryTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		900B71FA1F127C610058CDF9 /* RectangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectangleTests.swift; path = GeometryToolsTests/RectangleTests.swift; sourceTree = "<group>"; };
 		A3409A8808F14C43ECA54946 /* GeometryTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC342F757C18B4D01268B653 /* GeometryTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeometryTools.h; path = GeometryTools/GeometryTools.h; sourceTree = "<group>"; };
 		DF629B1FD0488578D584AFAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GeometryToolsTests/Info.plist; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 				071EF3121EE8817A00C0116B /* LineTests.swift */,
 				071EF3131EE8817A00C0116B /* PolygonTests.swift */,
 				07226BA91EEAE24400A1E3D2 /* PointTests.swift */,
+				900B71FA1F127C610058CDF9 /* RectangleTests.swift */,
 				C5AE7C0748B98CF9A42112E8 /* Supporting Files */,
 			);
 			name = GeometryToolsTests;
@@ -486,6 +490,7 @@
 				07226BAA1EEAE24400A1E3D2 /* PointTests.swift in Sources */,
 				071EF3181EE8817A00C0116B /* LineTests.swift in Sources */,
 				071EF3141EE8817A00C0116B /* AngleTests.swift in Sources */,
+				900B71FB1F127C610058CDF9 /* RectangleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +569,7 @@
 				07226BAB1EEAE24400A1E3D2 /* PointTests.swift in Sources */,
 				071EF3191EE8817A00C0116B /* LineTests.swift in Sources */,
 				071EF3151EE8817A00C0116B /* AngleTests.swift in Sources */,
+				900B71FC1F127C610058CDF9 /* RectangleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
