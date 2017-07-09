@@ -234,6 +234,6 @@ extension Rectangle: CustomStringConvertible {
     // MARK: CustomStringConvertible
 
     public var description: String {
-        return "Rectangle[ origin: \(origin), width: \(size.width), height: \(size.height) ]"
+        return "origin: \(origin), width: \(size.width), height: \(size.height)"
     }
 }
