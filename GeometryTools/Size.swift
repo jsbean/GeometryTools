@@ -25,8 +25,19 @@ public struct Size {
         self.height = height
     }
 
+    /// - Returns: a `Size` with both dimensions scaled by the same value.
     public func scaled(by value: Double) -> Size {
         return Size(width: width * value, height: height * value)
+    }
+
+    /// - Returns: a `Size` scaled by the given dimensions.
+    public func scaledBy(width widthScale: Double = 1, height heightScale: Double = 1) -> Size {
+        return Size(width: width * widthScale, height: height * heightScale)
+    }
+
+    /// - Returns: a `Size` scaled by the dimensions of `size`.
+    public func scaled(by size: Size) -> Size {
+        return scaledBy(width: size.width, height: size.height)
     }
 }
 
