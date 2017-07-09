@@ -31,7 +31,7 @@ public struct Size {
     }
 
     /// - Returns: a `Size` scaled by the given dimensions.
-    public func scaled(byWidth widthScale: Double = 1, byHeight heightScale: Double = 1) -> Size {
+    public func scaledBy(width widthScale: Double = 1, height heightScale: Double = 1) -> Size {
         return Size(width: width * widthScale, height: height * heightScale)
     }
 
