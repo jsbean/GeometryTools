@@ -195,7 +195,7 @@ public struct Rectangle: ConvexPolygonProtocol {
 
     /// - Returns: `Rectangle` geometrically equivalent to this one, with positive `height`
     /// and `width`.
-    public func normalized() -> Rectangle {
+    public var normalized: Rectangle {
         return Rectangle(
             origin: Point(x: minX, y: minY),
             size: Size(width: maxX-minX, height: maxY-minY)
