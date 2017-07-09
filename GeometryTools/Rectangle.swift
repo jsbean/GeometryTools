@@ -202,6 +202,25 @@ public struct Rectangle: ConvexPolygonProtocol {
         }
     }
 
+    /// - Returns: `Rectangle` with dimensions scaled by the given `width` and `height`, around
+    /// the given `anchor`.
+    public func scaledBy(
+        width widthScale: Double = 1,
+        height heightScale: Double = 1,
+        around anchor: ScaleAnchor
+        ) -> Rectangle
+    {
+        let newSize = self.size.scaledBy(width: widthScale, height: heightScale)
+
+        switch anchor {
+        case .origin:
+            return Rectangle(origin: origin, size: newSize)
+        case .center:
+            let newOrigin = Point(x: center.x - newSize.width/2, y: center.y - newSize.height/2)
+            return Rectangle(origin: newOrigin, size: newSize)
+        }
+    }
+
 }
 
 extension Rectangle: Equatable {
