@@ -120,7 +120,6 @@ extension Polygon: Monoid {
     public static let unit = Polygon(vertices: [])
     
     /// Creates union of two given `Polygon` values.
-    /// - Warning: Not yet implemented.
     public static func + (lhs: Polygon, rhs: Polygon) -> Polygon {
         return Polygon(vertices: (lhs.vertices + rhs.vertices).convexHull)
     }
