@@ -135,3 +135,22 @@ extension Polygon: Equatable {
         return lhs.vertices == rhs.vertices
     }
 }
+
+extension Polygon: CustomStringConvertible {
+
+    // MARK: CustomStringConvertible
+
+    /// Print the vertices in order of their appearance
+    public var description: String {
+        guard !vertices.isEmpty else { return "Polygon<0>[]" }
+
+        let size = vertices.endIndex - vertices.startIndex
+        var result = "Polygon<\(size)>[ "
+        result += vertices.first!.description
+        for i in 1..<size {
+            result += ", " + vertices[i].description
+        }
+
+        return result + " ]"
+    }
+}
