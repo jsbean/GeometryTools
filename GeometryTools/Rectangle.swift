@@ -199,9 +199,9 @@ public struct Rectangle: ConvexPolygonProtocol {
         width widthScale: Double = 1,
         height heightScale: Double = 1,
         around anchor: ScaleAnchor
-        ) -> Rectangle
+    ) -> Rectangle
     {
-        let newSize = self.size.scaledBy(width: widthScale, height: heightScale)
+        let newSize = size.scaledBy(width: widthScale, height: heightScale)
 
         switch anchor {
         case .origin:
