@@ -12,7 +12,7 @@ import Collections
 public protocol ConvexPolygonProtocol: PolygonProtocol { }
 
 extension ConvexPolygonProtocol {
-    
+
     /// - Returns: `ConvexPolygonContainer` containing only this `ConvexPolygonProtocol`-
     /// conforming type.
     public var collisionDetectable: ConvexPolygonContainer {

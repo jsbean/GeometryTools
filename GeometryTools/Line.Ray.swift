@@ -9,15 +9,15 @@
 import Foundation
 
 extension Line {
-    
+
     public enum Ray {
-        
+
         case up(Point)
         case down(Point)
         case left(Point)
         case right(Point)
         case slanted(point: Point, slope: Double)
-        
+
         public init(_ segment: Segment) {
 
             if segment.start.y == segment.end.y {
@@ -52,7 +52,7 @@ extension Line {
 }
 
 extension Line.Ray: Equatable {
-    
+
     public static func == (lhs: Line.Ray, rhs: Line.Ray) -> Bool {
         switch (lhs,rhs) {
         case let (.up(a), .up(b)):

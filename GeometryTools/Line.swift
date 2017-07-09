@@ -16,7 +16,7 @@ public enum Line {
     case vertical(Double)
     case horizontal(Double)
     case slanted(slope: Double, intercept: Double)
-    
+
     public init(_ segment: Line.Segment) {
 
         switch segment.slope {
@@ -29,7 +29,7 @@ public enum Line {
             self = .slanted(slope: segment.slope, intercept: intercept)
         }
     }
-    
+
     public init(slope: Double, intercept: Double) {
         self = slope == .infinity
             ? .vertical(.nan)
@@ -37,7 +37,7 @@ public enum Line {
                 ? .horizontal(intercept)
                 : .slanted(slope: slope, intercept: intercept)
     }
-    
+
     public func y(x: Double) -> Double {
         switch self {
         case .vertical:
@@ -48,7 +48,7 @@ public enum Line {
             return slope == .infinity ? x : slope * x + intercept
         }
     }
-    
+
     public func perpendicular(containing point: Point) -> Line {
         switch self {
         case .horizontal:
@@ -63,7 +63,7 @@ public enum Line {
 }
 
 extension Line: Equatable {
-    
+
     public static func == (lhs: Line, rhs: Line) -> Bool {
         switch (lhs,rhs) {
         case let (.vertical(a), .vertical(b)):

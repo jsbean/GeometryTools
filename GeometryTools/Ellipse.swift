@@ -7,10 +7,10 @@
 //
 
 public struct Ellipse {
-    
+
     public let center: Point
     public let size: Size
-    
+
     public init(center: Point, size: Size) {
         self.center = center
         self.size = size

@@ -11,7 +11,7 @@ import ArithmeticTools
 /// - Returns: `true` if any convex polygons of one `CollisionDetectable`-conforming type
 /// intersect with another. Otherwise, `false`.
 public func collision(_ a: CollisionDetectable, _ b: CollisionDetectable) -> Bool {
-    
+
     for a in a.collisionDetectable.polygons {
         for b in b.collisionDetectable.polygons {
             if collision(a,b) {
@@ -19,7 +19,7 @@ public func collision(_ a: CollisionDetectable, _ b: CollisionDetectable) -> Boo
             }
         }
     }
-    
+
     return false
 }
 
@@ -40,13 +40,13 @@ func axesOverlap(projecting other: ConvexPolygonProtocol, onto shape: ConvexPoly
 {
     // Project `shape` and `other` onto each axis of `shape`.
     for axis in shape.axes {
-        
+
         // If we ever see light between two shapes, we short-circuit to `false`
         if !axesOverlap(project(shape, onto: axis), project(other, onto: axis)) {
             return false
         }
     }
-    
+
     // All pairs of axes overlapped.
     return true
 }
@@ -62,12 +62,12 @@ func axesOverlap(_ a: (min: Double, max: Double), _ b: (min: Double, max: Double
 func project(_ shape: ConvexPolygonProtocol, onto axis: Vector2)
     -> (min: Double, max: Double)
 {
-    
+
     let length = axis.length
-    
+
     let values = shape.vertices.map { vertex in
         vertex.x * (axis.x / length) + vertex.y * (axis.y / length)
     }
-    
+
     return (values.min()!, values.max()!)
 }
