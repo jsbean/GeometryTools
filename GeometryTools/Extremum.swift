@@ -8,10 +8,10 @@
 
 /// Extremum.
 public enum Extremum {
-    
+
     /// Maximum
     case max
-    
+
     /// Minimum
     case min
 }

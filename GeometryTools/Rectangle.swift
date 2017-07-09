@@ -16,18 +16,18 @@ import ArithmeticTools
 /// - TODO: Consider storing vertices as with `Polygon`, as opposed to being computed.
 ///
 public struct Rectangle: ConvexPolygonProtocol {
-    
+
     public enum ScaleAnchor {
         case origin, center
     }
-    
+
     // MARK: - Type Properties
-    
+
     /// `Rectangle` with `origin` and `size` values of zero.
     public static let zero = Rectangle()
-    
+
     // MARK: - Instance Properties
-    
+
     /// A `Rectangle` geometrically equivalent to this one, with positive `height`
     /// and `width`.
     public var normalized: Rectangle {
@@ -50,74 +50,74 @@ public struct Rectangle: ConvexPolygonProtocol {
     public var minX: Double {
         return (size.width < 0) ? origin.x + size.width : origin.x
     }
-    
+
     /// Horizontal midpoint.
     public var midX: Double {
         return origin.x + (size.width / 2.0)
     }
-    
+
     /// Maximum X value.
     public var maxX: Double {
         return (size.width < 0) ? origin.x : origin.x + size.width
     }
-    
+
     /// Minimum Y value.
     public var minY: Double {
         return (size.height < 0) ? origin.y + size.height : origin.y
     }
-    
+
     /// Vertical midpoint.
     public var midY: Double {
         return origin.y + (size.height / 2.0)
     }
-    
+
     /// Maximum Y value.
     public var maxY: Double {
         return (size.height < 0) ? origin.y : origin.y + size.height
     }
-    
+
     /// - Returns: `true` if the `height` or `width` properties of `size` are `0`. Otherwise,
     /// false.
     public var isEmpty: Bool {
         return size.width == 0 || size.height == 0
     }
-    
+
     /// Center point.
     public var center: Point {
         return Point(x: midX, y: midY)
     }
-    
+
     /// Origin.
     public let origin: Point
-    
+
     /// Size.
     public let size: Size
-    
+
     // MARK: - Initializers
-    
+
     /// Creates a `Rectangle` with the given `origin` and the given `size`.
     public init(origin: Point = Point(), size: Size = Size()) {
         self.origin = origin
         self.size = size
     }
-    
+
     /// Creates a `Rectangle` with the given `center` and the given `size`.
     public init(center: Point, size: Size) {
         self.origin = Point(x: center.x - 0.5 * size.width, y: center.y + 0.5 * size.height)
         self.size = size
     }
-    
+
     /// Creates a `Rectangle` with the given `x`, `y`, `width`, and `height` values.
     public init(x: Double, y: Double, width: Double, height: Double) {
         self.origin = Point(x: x, y: y)
         self.size = Size(width: width, height: height)
     }
-    
+
     /// Creates a `Rectangle` with the given `width` and `height`, with an origin of `Point()`.
     public init(width: Double, height: Double) {
         self.init(x: 0, y: 0, width: width, height: height)
     }
-    
+
     /// Creates a `Rectangle` with the given `minX`, `minY`, `maxX`, and `maxY` values.
     public init(minX: Double, minY: Double, maxX: Double, maxY: Double) {
         precondition(maxX >= minX)
@@ -127,7 +127,7 @@ public struct Rectangle: ConvexPolygonProtocol {
         let height = maxY - minY
         self.init(origin: origin, size: Size(width: width, height: height))
     }
-    
+
     /// Creates a `Rectangle` with the given `vertices`.
     ///
     /// - Warning: Will crash if given invalid vertices.
@@ -135,42 +135,42 @@ public struct Rectangle: ConvexPolygonProtocol {
     public init <S: Sequence> (vertices: S) where S.Iterator.Element == Point {
         try! self.init(Polygon(vertices: VertexCollection(vertices)))
     }
-    
+
     /// Creates a `Rectangle` with the given `polygon`.
     ///
     /// - Throws: `PolygonError` if the given `polygon` is not rectangular.
     ///
     public init(_ polygon: Polygon) throws {
-        
+
         guard polygon.vertices.count == 4 else {
-            
+
             throw PolygonError.invalidVertices(
                 polygon.vertices,
                 Rectangle.self,
                 "A Rectangle must have four vertices!"
             )
         }
-        
+
         guard polygon.angles.allSatisfy({ $0 == Angle(degrees: 90) }) else {
-            
+
             throw PolygonError.invalidVertices(
                 polygon.vertices,
                 Rectangle.self,
                 "A Rectangle must have only right angles!"
             )
         }
-        
+
         // FIXME: Use less expensive method!
         let minX = polygon.vertices.map { $0.x }.min()!
         let maxX = polygon.vertices.map { $0.x }.max()!
         let minY = polygon.vertices.map { $0.y }.min()!
         let maxY = polygon.vertices.map { $0.y }.max()!
-        
+
         self.init(x: minX, y: minY, width: maxX - maxX, height: maxY - minY)
     }
 
     // MARK: - Instance Methods
-    
+
     /// - Returns: `true` if the given `point` is contained herein. Otherwise, `false`.
     public func contains(_ point: Point) -> Bool {
         return (minX...maxX).contains(point.x) && (minY...maxY).contains(point.y)
@@ -187,7 +187,7 @@ public struct Rectangle: ConvexPolygonProtocol {
         return Rectangle(origin: origin, size: size)
     }
 
-    /// - Returns: `Rectangle` with dimensions scaled by the given `value` around the given 
+    /// - Returns: `Rectangle` with dimensions scaled by the given `value` around the given
     /// `anchor`.
     public func scaled(by value: Double, around anchor: ScaleAnchor) -> Rectangle {
         switch anchor {
@@ -205,9 +205,9 @@ public struct Rectangle: ConvexPolygonProtocol {
 }
 
 extension Rectangle: Equatable {
-    
+
     // MARK: - Equatable
-    
+
     /// - Returns: `true` if values are equivalent. Otherwise, `false`.
     public static func == (lhs: Rectangle, rhs: Rectangle) -> Bool {
         return lhs.origin == rhs.origin && lhs.size == rhs.size
@@ -215,13 +215,13 @@ extension Rectangle: Equatable {
 }
 
 extension Array where Iterator.Element == Rectangle {
-    
+
     public var sum: Rectangle {
-        
+
         guard !self.isEmpty else {
             return .zero
         }
-        
+
         let (first,rest) = self.destructured!
         var minX = first.minX
         var minY = first.minY
