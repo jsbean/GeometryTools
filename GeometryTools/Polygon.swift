@@ -134,3 +134,13 @@ extension Polygon: Equatable {
         return lhs.vertices == rhs.vertices
     }
 }
+
+extension Polygon: CustomStringConvertible {
+
+    // MARK: CustomStringConvertible
+
+    /// Print the vertices in order of their appearance
+    public var description: String {
+        return "Polygon<\(vertices.count)>[" + vertices.map { "\($0)" }.joined(separator: ", ") + "]"
+    }
+}

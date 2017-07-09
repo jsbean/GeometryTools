@@ -228,3 +228,12 @@ extension Array where Iterator.Element == Rectangle {
         return Rectangle(x: minX, y: minY, width: width, height: height)
     }
 }
+
+extension Rectangle: CustomStringConvertible {
+
+    // MARK: CustomStringConvertible
+
+    public var description: String {
+        return "origin: \(origin), width: \(size.width), height: \(size.height)"
+    }
+}
