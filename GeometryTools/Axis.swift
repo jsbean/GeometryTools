@@ -8,10 +8,10 @@
 
 /// Axis.
 public enum Axis {
-    
+
     /// Vertical.
     case vertical
-    
+
     /// Horizontal.
     case horizontal
 }
