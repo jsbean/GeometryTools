@@ -141,6 +141,6 @@ extension Point: CustomStringConvertible {
 
     /// Printed description.
     public var description: String {
-        return "(\(x),\(y))"
+        return "(\(x), \(y))"
     }
 }
