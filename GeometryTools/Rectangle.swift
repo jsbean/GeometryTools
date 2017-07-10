@@ -190,15 +190,25 @@ public struct Rectangle: ConvexPolygonProtocol {
     /// - Returns: `Rectangle` with dimensions scaled by the given `value` around the given
     /// `anchor`.
     public func scaled(by value: Double, around anchor: ScaleAnchor) -> Rectangle {
+        return scaledBy(width: value, height: value, around: anchor)
+    }
+
+    /// - Returns: `Rectangle` with dimensions scaled by the given `width` and `height`, around
+    /// the given `anchor`.
+    public func scaledBy(
+        width widthScale: Double = 1,
+        height heightScale: Double = 1,
+        around anchor: ScaleAnchor
+    ) -> Rectangle
+    {
+        let newSize = size.scaledBy(width: widthScale, height: heightScale)
+
         switch anchor {
         case .origin:
-            return Rectangle(origin: origin, size: size.scaled(by: value))
+            return Rectangle(origin: origin, size: newSize)
         case .center:
-            let size = self.size.scaled(by: value)
-            return Rectangle(
-                origin: Point(x: center.x - 0.5 * size.width, y: center.y + 0.5 * size.height),
-                size: size.scaled(by: value)
-            )
+            let newOrigin = Point(x: center.x - newSize.width/2, y: center.y - newSize.height/2)
+            return Rectangle(origin: newOrigin, size: newSize)
         }
     }
 
