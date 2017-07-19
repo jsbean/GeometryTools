@@ -6,6 +6,8 @@
 //
 //
 
+import Algebra
+
 /// Model of rectangular size.
 public struct Size {
 
@@ -38,6 +40,13 @@ public struct Size {
     /// - Returns: a `Size` scaled by the dimensions of `size`.
     public func scaled(by size: Size) -> Size {
         return scaledBy(width: size.width, height: size.height)
+    }
+}
+
+extension Size: Zero {
+
+    public static var zero: Size {
+        return Size(width: 0, height: 0)
     }
 }
 

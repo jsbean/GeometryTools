@@ -12,7 +12,7 @@ import ArithmeticTools
 /// Circular collection of `Point` values.
 public typealias VertexCollection = CircularArray<Point>
 
-/// - Note: One day, we will be able to say: `extension VertexCollection`.
+// FIXME: One day, we will be able to say: `extension VertexCollection`.
 extension CircularArray where Element == Point {
 
     /// - Returns: The convex hull, or envelope, of `VertexCollection`.

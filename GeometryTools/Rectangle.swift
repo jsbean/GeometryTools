@@ -218,7 +218,7 @@ extension Rectangle: AdditiveSemigroup {
         let minX = min(lhs.minX, rhs.minX)
         let maxX = max(lhs.maxX, rhs.maxX)
         let minY = min(lhs.minY, rhs.minY)
-        let maxY = min(lhs.maxY, rhs.maxY)
+        let maxY = max(lhs.maxY, rhs.maxY)
         return Rectangle(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
     }
 }
