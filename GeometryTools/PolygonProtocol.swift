@@ -71,7 +71,7 @@ extension PolygonProtocol {
             return edge.x(y: point.y)
         }
 
-        return edges
+        return edges.lazy
 
             // All of the points of the horizontal ray eminating from the point
             .flatMap { edge in intersection(ofHorizontalRayFrom: point, through: edge) }

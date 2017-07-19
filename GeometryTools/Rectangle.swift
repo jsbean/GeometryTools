@@ -6,10 +6,9 @@
 //
 //
 
+import Algebra
 import Collections
 import ArithmeticTools
-
-
 
 /// A structure that contains the location and dimensions of a rectangle.
 ///
@@ -211,7 +210,17 @@ public struct Rectangle: ConvexPolygonProtocol {
             return Rectangle(origin: newOrigin, size: newSize)
         }
     }
+}
 
+extension Rectangle: AdditiveSemigroup {
+
+    public static func + (lhs: Rectangle, rhs: Rectangle) -> Rectangle {
+        let minX = min(lhs.minX, rhs.minX)
+        let maxX = max(lhs.maxX, rhs.maxX)
+        let minY = min(lhs.minY, rhs.minY)
+        let maxY = min(lhs.maxY, rhs.maxY)
+        return Rectangle(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
+    }
 }
 
 extension Rectangle: Equatable {
@@ -221,31 +230,6 @@ extension Rectangle: Equatable {
     /// - Returns: `true` if values are equivalent. Otherwise, `false`.
     public static func == (lhs: Rectangle, rhs: Rectangle) -> Bool {
         return lhs.origin == rhs.origin && lhs.size == rhs.size
-    }
-}
-
-extension Array where Iterator.Element == Rectangle {
-
-    public var sum: Rectangle {
-
-        guard !self.isEmpty else {
-            return .zero
-        }
-
-        let (first,rest) = self.destructured!
-        var minX = first.minX
-        var minY = first.minY
-        var maxX = first.maxX
-        var maxY = first.maxY
-        for rect in rest {
-            if rect.minX < minX { minX = rect.minX }
-            if rect.maxX > maxX { maxX = rect.maxX }
-            if rect.minY < minY { minY = rect.minY }
-            if rect.maxY > maxY { maxY = rect.maxY }
-        }
-        let width = maxX - minX
-        let height = maxY - minY
-        return Rectangle(x: minX, y: minY, width: width, height: height)
     }
 }
 
