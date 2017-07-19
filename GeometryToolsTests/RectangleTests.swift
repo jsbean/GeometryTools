@@ -8,6 +8,7 @@
 
 
 import XCTest
+import Algebra
 import GeometryTools
 
 class RectangleTests: XCTestCase {
@@ -90,4 +91,18 @@ class RectangleTests: XCTestCase {
         XCTAssertEqual(r.scaledBy(height: 3, around: .center), expected)
     }
 
+    func testRectangleSum() {
+        let a = Rectangle(origin: Point(x: 0, y: 0), size: Size(width: 10, height: 10))
+        let b = Rectangle(origin: Point(x: -5, y: 5), size: Size(width: 10, height: 10))
+        let expected = Rectangle(origin: Point(x: -5, y: 0), size: Size(width: 15, height: 10))
+        XCTAssertEqual(a + b, expected)
+    }
+
+    func testRectangleNonEmptySum() {
+        let a = Rectangle(origin: Point(x: 0, y: 0), size: Size(width: 10, height: 10))
+        let b = Rectangle(origin: Point(x: -5, y: 5), size: Size(width: 10, height: 10))
+        let rects = [a,b]
+        let expected = Rectangle(origin: Point(x: -5, y: 0), size: Size(width: 15, height: 10))
+        XCTAssertEqual(rects.nonEmptySum, expected)
+    }
 }

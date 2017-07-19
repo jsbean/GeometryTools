@@ -7,6 +7,7 @@
 //
 
 import Darwin
+import Algebra
 
 /// Representation of a point.
 public struct Point {
@@ -70,6 +71,14 @@ public struct Point {
             let y = ((2 * (m * (m * (self.y - k) + self.x))) / denom) + (2 * k - self.y)
             return Point(x: x, y: y)
         }
+    }
+}
+
+extension Point: Additive {
+
+    /// Additive identity.
+    public static var zero: Point {
+        return Point(x: 0, y: 0)
     }
 }
 
