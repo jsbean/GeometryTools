@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Algebra
 import Collections
 import ArithmeticTools
 @testable import GeometryTools
@@ -156,7 +157,6 @@ class PolygonTests: XCTestCase {
         )
         
         XCTAssertEqual(a + b + c, expected)
-        XCTAssertEqual([a,b,c].reduce(.unit, +), expected)
         XCTAssertEqual([a,b,c].sum, expected)
     }
 }
