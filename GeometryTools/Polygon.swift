@@ -6,6 +6,7 @@
 //
 //
 
+import Algebra
 import Collections
 import ArithmeticTools
 
@@ -114,10 +115,10 @@ public struct Polygon: PolygonProtocol {
     }
 }
 
-extension Polygon: Monoid {
-
+extension Polygon: Additive {
+    
     /// Empty polygon.
-    public static let unit = Polygon(vertices: [])
+    public static let zero = Polygon(vertices: [])
 
     /// Creates union of two given `Polygon` values.
     public static func + (lhs: Polygon, rhs: Polygon) -> Polygon {
