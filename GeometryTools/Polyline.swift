@@ -7,9 +7,9 @@
 //
 
 public struct Polyline {
-    
+
     public let points: [Point]
-    
+
     public init(_ points: [Point]) {
         self.points = points
     }
