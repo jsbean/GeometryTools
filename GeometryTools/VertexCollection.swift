@@ -117,7 +117,7 @@ extension CircularArray where Element == Point {
         return triangles.map { $0.crossProduct.sign }.isHomogeneous
     }
 
-    /// - Returns: Wheter vertices are arranged in a clockwise or counterclockwise fasion.
+    /// - Returns: Whether vertices are arranged in a clockwise or counterclockwise fasion.
     public var rotation: Rotation {
         let sum = edges.reduce(Double(0)) { accum, cur in
             let (a,b) = (cur.start, cur.end)
